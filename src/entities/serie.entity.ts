@@ -1,6 +1,7 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Author } from 'src/entities/author.entity';
-import { Column, Entity, JoinTable, ManyToMany, PrimaryColumn } from 'typeorm';
+import { Book } from 'src/entities/book.entity';
+import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.SERIE })
 export class Serie {
@@ -19,6 +20,9 @@ export class Serie {
   @Column(`varchar`, { length: 10, nullable: true })
   finishDate?: string;
 
+  @OneToMany(() => Book, (book) => book.uuid)
+  books: Book[];
+
   @ManyToMany(() => Author, (author) => author.books, { cascade: true })
   @JoinTable({
     name: `author_series`,
@@ -27,12 +31,13 @@ export class Serie {
   })
   authors?: Author[];
 
-  constructor(uuid: string, name: string, volumes: number, releaseDate: string, finishDate: string, authors: Author[]) {
+  constructor(uuid: string, name: string, volumes: number, releaseDate: string, finishDate: string, books: Book[], authors: Author[]) {
     this.uuid = uuid;
     this.name = name;
     this.volumes = volumes;
     this.releaseDate = releaseDate;
     this.finishDate = finishDate;
+    this.books = books ?? [];
     this.authors = authors ?? [];
   }
 }

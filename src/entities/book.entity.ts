@@ -1,6 +1,8 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Author } from 'src/entities/author.entity';
+import { Editorial } from 'src/entities/editorials.entity';
 import { Genre } from 'src/entities/genre.entity';
+import { Serie } from 'src/entities/serie.entity';
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.BOOK })
@@ -37,14 +39,14 @@ export class Book {
   @Column(`varchar`, { length: 10, nullable: false })
   publicationDate: string;
 
-  @Column(`varchar`, { length: 50, nullable: true })
-  serieId?: string;
+  @ManyToOne(() => Serie, (serie) => serie.books)
+  serieId: string;
 
   @Column(`integer`, { nullable: true })
   edition?: string;
 
-  @Column(`varchar`, { length: 50, nullable: true })
-  editorialId?: string;
+  @ManyToOne(() => Editorial, (editorial) => editorial.books)
+  editorialId: string;
 
   @Column(`varchar`, { length: 150, nullable: true })
   downloadLink?: string;
