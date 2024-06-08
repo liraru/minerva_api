@@ -1,5 +1,6 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Book } from 'src/entities/book.entity';
+import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.EDITORIALS })
 export class Editorial {
@@ -8,4 +9,13 @@ export class Editorial {
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
+
+  @OneToMany(() => Book, (book) => book.uuid)
+  books: Book[];
+
+  constructor(uuid: string, name: string, books: Book[]) {
+    this.uuid = uuid;
+    this.name = name;
+    this.books = books ?? [];
+  }
 }
