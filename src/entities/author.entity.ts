@@ -7,7 +7,7 @@ import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
 @Entity({ name: ENTITIES.AUTHOR })
 export class Author {
   @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  uuid: string;
+  id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
@@ -31,25 +31,27 @@ export class Author {
   series: Serie[];
 
   @ManyToMany(() => Manga, (manga) => manga.authors)
-  manga: Manga[];
+  mangas: Manga[];
 
   constructor(
-    uuid: string,
+    id: string,
     name: string,
     lastname?: string,
     birthDate?: string,
     deceasedDate?: string,
     countryId?: string,
     books?: Book[],
-    series?: Serie[]
+    series?: Serie[],
+    mangas?: Manga[]
   ) {
-    this.uuid = uuid;
+    this.id = id;
     this.name = name;
     this.lastname = lastname;
     this.birthdate = birthDate;
     this.deceasedDate = deceasedDate;
     this.countryId = countryId;
-    this.books = books ?? [];
-    this.series = series ?? [];
+    this.books = books;
+    this.series = series;
+    this.mangas = mangas;
   }
 }

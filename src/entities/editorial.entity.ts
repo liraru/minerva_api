@@ -6,20 +6,20 @@ import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 @Entity({ name: ENTITIES.EDITORIALS })
 export class Editorial {
   @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  uuid: string;
+  id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
 
-  @OneToMany(() => Book, (book) => book.uuid)
+  @OneToMany(() => Book, (book) => book.id)
   books: Book[];
 
-  @OneToMany(() => Manga, (manga) => manga.uuid)
-  manga: Manga[];
+  @OneToMany(() => Manga, (manga) => manga.id)
+  mangas: Manga[];
 
-  constructor(uuid: string, name: string, books: Book[]) {
-    this.uuid = uuid;
+  constructor(id: string, name: string, books: Book[]) {
+    this.id = id;
     this.name = name;
-    this.books = books ?? [];
+    this.books = books;
   }
 }

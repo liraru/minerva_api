@@ -5,7 +5,7 @@ import { Column, Entity, ManyToOne, PrimaryColumn } from 'typeorm';
 @Entity({ name: ENTITIES.MANGA_CHAPTERS })
 export class MangaChapter {
   @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  uuid: string;
+  id: string;
 
   @ManyToOne(() => Manga, (manga) => manga.mangaChapter)
   manga: Manga;
@@ -16,11 +16,11 @@ export class MangaChapter {
   @Column(`varchar`, { length: 50, nullable: false })
   folder: string;
 
-  @Column(`varchar`, { length: 50, nullable: false })
+  @Column(`varchar`, { length: 50, nullable: true })
   publicationDate: string;
 
-  constructor(uuid: string, manga: Manga, pages: number, folder: string, publicationDate: string) {
-    this.uuid = uuid;
+  constructor(id: string, manga: Manga, pages: number, folder: string, publicationDate: string) {
+    this.id = id;
     this.manga = manga;
     this.pages = pages;
     this.folder = folder;

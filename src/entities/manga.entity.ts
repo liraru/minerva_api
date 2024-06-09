@@ -8,16 +8,16 @@ import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryCol
 @Entity({ name: ENTITIES.MANGA })
 export class Manga {
   @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  uuid: string;
+  id: string;
 
   @Column(`varchar`, { length: 150, nullable: false })
   title: string;
 
   @ManyToMany(() => Author, (author) => author.books, { cascade: true })
   @JoinTable({
-    name: `author_manga_serie`,
-    joinColumn: { name: `authorId`, referencedColumnName: `uuid` },
-    inverseJoinColumn: { name: `bookId`, referencedColumnName: `uuid` }
+    name: `author_manga`,
+    joinColumn: { name: `authorId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `mangaId`, referencedColumnName: `id` }
   })
   authors: Author[];
 
@@ -27,13 +27,13 @@ export class Manga {
   @Column(`varchar`, { length: 150, nullable: true })
   cover: string;
 
-  @ManyToOne(() => Editorial, (editorial) => editorial.manga)
+  @ManyToOne(() => Editorial, (editorial) => editorial.mangas)
   editorial: Editorial;
 
   @ManyToOne(() => Genre, (genre) => genre.mangas)
   genre: Genre;
 
-  @OneToMany(() => MangaChapter, (chapter) => chapter.uuid)
+  @OneToMany(() => MangaChapter, (chapter) => chapter.id)
   mangaChapter?: MangaChapter[];
 
   @Column(`integer`, { nullable: false })
@@ -52,7 +52,7 @@ export class Manga {
   language: string;
 
   constructor(
-    uuid: string,
+    id: string,
     title: string,
     isDigital: boolean,
     cover: string,
@@ -65,7 +65,7 @@ export class Manga {
     lastVolumeDate?: string,
     mangaChapter?: MangaChapter[]
   ) {
-    this.uuid = uuid;
+    this.id = id;
     this.title = title;
     this.cover = cover;
     this.isDigital = isDigital;

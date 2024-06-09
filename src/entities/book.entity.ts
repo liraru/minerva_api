@@ -8,7 +8,7 @@ import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {
   @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  uuid: string;
+  id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
   title: string;
@@ -16,19 +16,19 @@ export class Book {
   @ManyToMany(() => Author, (author) => author.books, { cascade: true })
   @JoinTable({
     name: `author_books`,
-    joinColumn: { name: `authorId`, referencedColumnName: `uuid` },
-    inverseJoinColumn: { name: `bookId`, referencedColumnName: `uuid` }
+    joinColumn: { name: `authorId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `bookId`, referencedColumnName: `id` }
   })
   authors: Author[];
 
   @Column(`varchar`, { length: 50, nullable: false })
   format: string;
 
-  @Column(`varchar`, { length: 50, nullable: false })
-  location: string;
+  @Column(`varchar`, { length: 10, nullable: true })
+  shelfCode: string;
 
   @ManyToOne(() => Genre, (genre) => genre.books)
-  genreId: string;
+  genre: string;
 
   @Column(`varchar`, { length: 3, nullable: false })
   language: string;
@@ -40,13 +40,13 @@ export class Book {
   publicationDate: string;
 
   @ManyToOne(() => Serie, (serie) => serie.books)
-  serieId: string;
+  serie: string;
 
   @Column(`integer`, { nullable: true })
   edition?: string;
 
   @ManyToOne(() => Editorial, (editorial) => editorial.books)
-  editorialId: string;
+  editorial: string;
 
   @Column(`varchar`, { length: 150, nullable: true })
   downloadLink?: string;
@@ -59,4 +59,40 @@ export class Book {
 
   @Column(`varchar`, { length: 50, nullable: false })
   ownerId: string;
+
+  constructor(
+    id: string,
+    title: string,
+    authors: Author[],
+    format: string,
+    location: string,
+    genreId: string,
+    language: string,
+    originalLanguage: string,
+    publicationDate: string,
+    serieId: string,
+    ownerId: string,
+    editorialId: string,
+    edition?: string,
+    downloadLink?: string,
+    cover?: string,
+    buyDate?: string
+  ) {
+    this.id = id;
+    this.title = title;
+    this.authors = authors;
+    this.format = format;
+    this.shelfCode = location;
+    this.genre = genreId;
+    this.language = language;
+    this.originalLanguage = originalLanguage;
+    this.publicationDate = publicationDate;
+    this.serie = serieId;
+    this.edition = edition;
+    this.editorial = editorialId;
+    this.downloadLink = downloadLink;
+    this.cover = cover;
+    this.buyDate = buyDate;
+    this.ownerId = ownerId;
+  }
 }
