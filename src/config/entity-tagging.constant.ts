@@ -3,7 +3,7 @@ export const ENTITIES = {
   BOOK: `books`,
   EDITORIALS: `editorials`,
   GENRE: `genres`,
-  MANGA_SERIE: `manga-series`,
   SERIE: `series`,
-  STORAGED_MANGA: `storaged-mangas`
+  MANGA: `mangas`,
+  MANGA_CHAPTERS: `manga_chapters`
 };

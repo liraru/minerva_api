@@ -1,5 +1,6 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Book } from 'src/entities/book.entity';
+import { Manga } from 'src/entities/manga-serie.entity';
 import { Serie } from 'src/entities/serie.entity';
 import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
 
@@ -29,12 +30,26 @@ export class Author {
   @ManyToMany(() => Serie, (serie) => serie.authors)
   series: Serie[];
 
-  constructor(uuid: string, name: string, lastname?: string, birthDate?: string, deceasedDate?: string, countryId?: string) {
+  @ManyToMany(() => Manga, (manga) => manga.authors)
+  manga: Manga[];
+
+  constructor(
+    uuid: string,
+    name: string,
+    lastname?: string,
+    birthDate?: string,
+    deceasedDate?: string,
+    countryId?: string,
+    books?: Book[],
+    series?: Serie[]
+  ) {
     this.uuid = uuid;
     this.name = name;
     this.lastname = lastname;
     this.birthdate = birthDate;
     this.deceasedDate = deceasedDate;
     this.countryId = countryId;
+    this.books = books ?? [];
+    this.series = series ?? [];
   }
 }

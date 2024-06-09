@@ -1,5 +1,6 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Book } from 'src/entities/book.entity';
+import { Manga } from 'src/entities/manga-serie.entity';
 import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.EDITORIALS })
@@ -12,6 +13,9 @@ export class Editorial {
 
   @OneToMany(() => Book, (book) => book.uuid)
   books: Book[];
+
+  @OneToMany(() => Manga, (manga) => manga.uuid)
+  manga: Manga[];
 
   constructor(uuid: string, name: string, books: Book[]) {
     this.uuid = uuid;

@@ -1,6 +1,6 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Author } from 'src/entities/author.entity';
-import { Editorial } from 'src/entities/editorials.entity';
+import { Editorial } from 'src/entities/editorial.entity';
 import { Genre } from 'src/entities/genre.entity';
 import { Serie } from 'src/entities/serie.entity';
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
