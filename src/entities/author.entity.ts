@@ -1,6 +1,6 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Book } from 'src/entities/book.entity';
-import { Manga } from 'src/entities/manga-serie.entity';
+import { Manga } from 'src/entities/manga.entity';
 import { Serie } from 'src/entities/serie.entity';
 import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
 
