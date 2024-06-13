@@ -4,7 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { databaseConfig } from 'private/database.config';
 
-const environment: 'local' | 'develop' = 'local';
+const environment: 'local' | 'develop' = 'develop';
 
 function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
   console.log(`>>>>> Initializing with ${host} data <<<<<`.toUpperCase());
