@@ -25,7 +25,6 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "files.exclude": {
     "dist": true,
-    "**/*.spec.ts": true,
     "e2e": true,
     ".idea": true,
     "lib": true,
