@@ -1,10 +1,9 @@
+import { GenresModule } from '@modules/genres/genres.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { databaseConfig } from 'private/database.config';
 
-const environment: 'local' | 'develop' = 'develop';
+const environment: 'local' | 'develop' = 'local';
 
 function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
   console.log(`>>>>> Initializing with ${host} data <<<<<`.toUpperCase());
@@ -17,8 +16,8 @@ function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
 }
 
 @Module({
-  imports: [TypeOrmModule.forRoot(getDBConfig(environment))],
-  controllers: [AppController],
-  providers: [AppService]
+  imports: [TypeOrmModule.forRoot(getDBConfig(environment)), GenresModule],
+  controllers: [],
+  providers: []
 })
 export class AppModule {}

@@ -12,12 +12,12 @@ export class Genre {
   name: string;
 
   @OneToMany(() => Book, (book) => book.id)
-  books: Book[];
+  books?: Book[];
 
   @OneToMany(() => Manga, (manga) => manga.id)
-  mangas: Manga[];
+  mangas?: Manga[];
 
-  constructor(id: string, name: string, books: Book[], mangas: Manga[]) {
+  constructor(id: string, name: string, books?: Book[], mangas?: Manga[]) {
     this.id = id;
     this.name = name;
     this.books = books;
