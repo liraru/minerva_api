@@ -1,5 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
-import { GenresService } from '@services/genres/genres.service';
+import { GenresService } from '@modules/genres/services/genres.service';
 
 @Controller('genres')
 export class GenresController {

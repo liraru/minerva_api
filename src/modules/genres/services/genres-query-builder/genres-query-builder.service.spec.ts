@@ -6,7 +6,7 @@ describe('GenresQueryBuilderService', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [GenresQueryBuilderService],
+      providers: [GenresQueryBuilderService]
     }).compile();
 
     service = module.get<GenresQueryBuilderService>(GenresQueryBuilderService);

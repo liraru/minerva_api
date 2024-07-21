@@ -1,4 +1,4 @@
-import { GenresQueryBuilderService } from '@services/genres/genres-query-builder/genres-query-builder.service';
+import { GenresQueryBuilderService } from '@modules/genres/services/genres-query-builder/genres-query-builder.service';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
