@@ -36,7 +36,7 @@ export class AuthorsService {
     return this.getById(id);
   }
 
-  async update(id: string, author: Author): Promise<Author> {
+  async update(id: string, author: Partial<Author>): Promise<Author> {
     const storaged = await this.getById(id);
     if (!storaged)
       throw new HttpException(`No author found with id ${id}`, HttpStatus.NOT_FOUND);
