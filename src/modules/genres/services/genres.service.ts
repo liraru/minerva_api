@@ -22,7 +22,11 @@ export class GenresService {
   async create(name: string): Promise<Genre> {
     const id = uuidv4();
     const result = await this._genresQB.create(id, name);
-    if (!result) throw new HttpException(`There was an error creating the genre`, HttpStatus.EXPECTATION_FAILED);
+    if (!result)
+      throw new HttpException(
+        `There was an error creating the genre`,
+        HttpStatus.EXPECTATION_FAILED
+      );
     return this.getById(id);
   }
 
@@ -30,13 +34,21 @@ export class GenresService {
     const storagedGenre = await this.getById(id);
     genre = { ...storagedGenre, ...genre };
     const result = await this._genresQB.update(id, genre);
-    if (!result.affected) throw new HttpException(`There was an error updating the Genre`, HttpStatus.EXPECTATION_FAILED);
+    if (!result.affected)
+      throw new HttpException(
+        `There was an error updating the Genre`,
+        HttpStatus.EXPECTATION_FAILED
+      );
     return this.getById(id);
   }
 
   async delete(id: string): Promise<void> {
     const result = await this._genresQB.delete(id);
-    if (!result.affected) throw new HttpException(`There was an error deleting the genre`, HttpStatus.EXPECTATION_FAILED);
+    if (!result.affected)
+      throw new HttpException(
+        `There was an error deleting the genre`,
+        HttpStatus.EXPECTATION_FAILED
+      );
     return null;
   }
 }

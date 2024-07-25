@@ -7,11 +7,21 @@
   "endOfLine": "auto",
   "trailingComma": "none",
   "useTabs": false,
+  "rules": {
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off"
+  },
   "overrides": [
     {
       "files": "*.json",
       "options": {
         "printWidth": 80
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 90
       }
     }
   ]

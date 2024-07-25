@@ -21,17 +21,20 @@ export class Author {
   @Column(`varchar`, { length: 10, nullable: true })
   deceasedDate?: string;
 
+  @Column(`boolean`, {nullable: false})
+  active: boolean;
+
   @Column(`varchar`, { length: 50, nullable: true })
   countryId?: string;
 
   @ManyToMany(() => Book, (book) => book.authors)
-  books: Book[];
+  books?: Book[];
 
   @ManyToMany(() => Serie, (serie) => serie.authors)
-  series: Serie[];
+  series?: Serie[];
 
   @ManyToMany(() => Manga, (manga) => manga.authors)
-  mangas: Manga[];
+  mangas?: Manga[];
 
   constructor(
     id: string,
