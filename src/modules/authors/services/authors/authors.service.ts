@@ -14,11 +14,11 @@ export class AuthorsService {
   }
 
   async getById(id: string): Promise<Author> {
-    const result = await this._authorsQB.get(id);
-    if (!result.length) {
+    const result = await this._authorsQB.getById(id);
+    if (!result) {
       throw new HttpException(`Author with ID ${id} doesn't exist`, HttpStatus.NOT_FOUND);
     }
-    return result[0];
+    return result;
   }
 
   async getByName(search: string): Promise<Author[]> {
@@ -27,7 +27,7 @@ export class AuthorsService {
 
   async create(author: Author): Promise<Author> {
     const id = uuidv4();
-    const result = await this._authorsQB.create({ id, ...author });
+    const result = await this._authorsQB.create({ id, active: true, ...author });
     if (!result)
       throw new HttpException(
         `There was an error creating the author`,

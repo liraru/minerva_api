@@ -9,9 +9,18 @@ export class AuthorsQueryBuilderService {
     @InjectRepository(Author) private readonly _authorsRepo: Repository<Author>
   ) {}
 
-  get(id?: string): Promise<Author[]> {
-    if (id) return this._authorsRepo.find({ where: { id: id } });
+  get(): Promise<Author[]> {
     return this._authorsRepo.find({ order: { lastname: 'ASC', name: 'ASC' } });
+  }
+
+  public getById(id: string): Promise<Author> {
+    return this._authorsRepo.findOne({
+      relations: { books: true }, // ! funciona
+      // relations: { books: true, series: true, mangas: true },
+      // relations: ['books'], // ! funciona
+      // relations: ['books', 'series', 'mangas'],
+      where: { id: id }
+    });
   }
 
   getByName(search: string) {
