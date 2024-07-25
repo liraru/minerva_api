@@ -2,7 +2,7 @@ import { Author } from '@entities/author.entity';
 import { AuthorsQueryBuilderService } from '@modules/authors/services/authors-query-builder/authors-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Http2ServerResponse } from 'http2';
-import { UpdateResult } from 'typeorm';
+import { DeleteResult, UpdateResult } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
@@ -54,13 +54,19 @@ export class AuthorsService {
     const result = await this._authorsQB.logicalDelete(id, isActive);
     if (!result.affected)
       throw new HttpException(
-        `There was an error ${'disabling'} the author`,
+        `There was an error ${isActive ? 'enabling' : 'disabling'} the author`,
         HttpStatus.EXPECTATION_FAILED
       );
     return result;
   }
 
-  async enable(id): Promise<Author>;
-
-  async delete(id: string): Promise<void>;
+  async delete(id: string): Promise<DeleteResult> {
+    const result = await this._authorsQB.delete(id);
+    if (!result.affected)
+      throw new HttpException(
+        `There was an error deleting the author`,
+        HttpStatus.EXPECTATION_FAILED
+      );
+    return result;
+  }
 }
