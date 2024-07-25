@@ -29,9 +29,17 @@ export class Serie {
     joinColumn: { name: `authorId`, referencedColumnName: `id` },
     inverseJoinColumn: { name: `serieId`, referencedColumnName: `id` }
   })
-  authors?: Author[];
+  authors: Author[];
 
-  constructor(id: string, name: string, volumes: number, releaseDate: string, finishDate: string, books: Book[], authors: Author[]) {
+  constructor(
+    id: string,
+    name: string,
+    volumes: number,
+    releaseDate: string,
+    finishDate: string,
+    books: Book[],
+    authors: Author[]
+  ) {
     this.id = id;
     this.name = name;
     this.volumes = volumes;

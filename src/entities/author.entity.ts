@@ -21,7 +21,7 @@ export class Author {
   @Column(`varchar`, { length: 10, nullable: true })
   deceasedDate?: string;
 
-  @Column(`boolean`, {nullable: false})
+  @Column(`boolean`, { nullable: false, default: true })
   active: boolean;
 
   @Column(`varchar`, { length: 50, nullable: true })

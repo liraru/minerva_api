@@ -1,7 +1,6 @@
 import { Author } from '@entities/author.entity';
 import { AuthorsQueryBuilderService } from '@modules/authors/services/authors-query-builder/authors-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { Http2ServerResponse } from 'http2';
 import { DeleteResult, UpdateResult } from 'typeorm';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -26,14 +25,13 @@ export class AuthorsService {
   }
 
   async create(author: Author): Promise<Author> {
-    const id = uuidv4();
-    const result = await this._authorsQB.create({ id, active: true, ...author });
+    const result = await this._authorsQB.create({ id: uuidv4(), ...author });
     if (!result)
       throw new HttpException(
         `There was an error creating the author`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return this.getById(id);
+    return this.getById(result.identifiers[0].id);
   }
 
   async update(id: string, author: Partial<Author>): Promise<Author> {
