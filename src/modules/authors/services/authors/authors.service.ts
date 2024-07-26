@@ -12,8 +12,10 @@ export class AuthorsService {
     return await this._authorsQB.get();
   }
 
-  async getById(id: string): Promise<Author> {
-    const result = await this._authorsQB.getById(id);
+  async getById(id: string, isFull: boolean): Promise<Author> {
+    const result = isFull
+      ? await this._authorsQB.getFullById(id)
+      : await this._authorsQB.getById(id);
     if (!result) {
       throw new HttpException(`Author with ID ${id} doesn't exist`, HttpStatus.NOT_FOUND);
     }
@@ -31,11 +33,11 @@ export class AuthorsService {
         `There was an error creating the author`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return this.getById(result.identifiers[0].id);
+    return this.getById(result.identifiers[0].id, false);
   }
 
   async update(id: string, author: Partial<Author>): Promise<Author> {
-    const storaged = await this.getById(id);
+    const storaged = await this.getById(id, false);
     if (!storaged)
       throw new HttpException(`No author found with id ${id}`, HttpStatus.NOT_FOUND);
     const updated = { ...storaged, ...author };
@@ -45,7 +47,7 @@ export class AuthorsService {
         `There was an error updating author ${id}`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return this.getById(id);
+    return this.getById(id, false);
   }
 
   async changeActive(id: string, isActive: boolean): Promise<UpdateResult> {

@@ -1,6 +1,6 @@
 import { Author } from '@entities/author.entity';
 import { AuthorsService } from '@modules/authors/services/authors/authors.service';
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/common';
 
 @Controller('authors')
 export class AuthorsController {
@@ -13,7 +13,7 @@ export class AuthorsController {
 
   @Get(`/:id`)
   public getById(@Param(`id`) id: string) {
-    return this._authorsService.getById(id);
+    return this._authorsService.getById(id, true);
   }
 
   @Post(``)
@@ -26,12 +26,12 @@ export class AuthorsController {
     return this._authorsService.update(id, author);
   }
 
-  @Put(`/activate/:id`)
+  @Patch(`/:id/activate`)
   public activate(@Param(`id`) id: string) {
     this._authorsService.changeActive(id, true);
   }
 
-  @Delete(`/deactivate/:id`)
+  @Delete(`/:id/deactivate`)
   public delete(@Param(`id`) id: string) {
     this._authorsService.changeActive(id, false);
   }

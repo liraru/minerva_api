@@ -14,6 +14,10 @@ export class AuthorsQueryBuilderService {
   }
 
   public getById(id: string): Promise<Author> {
+    return this._authorsRepo.findOne({ where: { id: id } });
+  }
+
+  public getFullById(id: string): Promise<Author> {
     return this._authorsRepo.findOne({
       relations: { books: true, series: true, mangas: true },
       where: { id: id }
