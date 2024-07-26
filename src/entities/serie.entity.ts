@@ -23,15 +23,23 @@ export class Serie {
   @OneToMany(() => Book, (book) => book.id)
   books: Book[];
 
-  @ManyToMany(() => Author, (author) => author.books, { cascade: true })
+  @ManyToMany(() => Author, (author) => author.series, { cascade: true })
   @JoinTable({
     name: `author_series`,
     joinColumn: { name: `authorId`, referencedColumnName: `id` },
     inverseJoinColumn: { name: `serieId`, referencedColumnName: `id` }
   })
-  authors?: Author[];
+  authors: Author[];
 
-  constructor(id: string, name: string, volumes: number, releaseDate: string, finishDate: string, books: Book[], authors: Author[]) {
+  constructor(
+    id: string,
+    name: string,
+    volumes: number,
+    releaseDate: string,
+    finishDate: string,
+    books: Book[],
+    authors: Author[]
+  ) {
     this.id = id;
     this.name = name;
     this.volumes = volumes;
