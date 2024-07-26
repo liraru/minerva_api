@@ -15,9 +15,9 @@ export class AuthorsQueryBuilderService {
 
   public getById(id: string): Promise<Author> {
     return this._authorsRepo.findOne({
-      relations: { books: true }, // ! funciona
-      // relations: { books: true, series: true },
+      // relations: { books: true }, // ! funciona
       // relations: ['books'], // ! funciona
+      relations: { books: true, series: true, mangas: true },
       // relations: ['books', 'series', 'mangas'],
       where: { id: id }
     });

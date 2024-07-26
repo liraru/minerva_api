@@ -13,7 +13,7 @@ export class Manga {
   @Column(`varchar`, { length: 150, nullable: false })
   title: string;
 
-  @ManyToMany(() => Author, (author) => author.books, { cascade: true })
+  @ManyToMany(() => Author, (author) => author.mangas, { cascade: true })
   @JoinTable({
     name: `author_manga`,
     joinColumn: { name: `authorId`, referencedColumnName: `id` },

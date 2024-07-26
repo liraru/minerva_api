@@ -23,7 +23,7 @@ export class Serie {
   @OneToMany(() => Book, (book) => book.id)
   books: Book[];
 
-  @ManyToMany(() => Author, (author) => author.books, { cascade: true })
+  @ManyToMany(() => Author, (author) => author.series, { cascade: true })
   @JoinTable({
     name: `author_series`,
     joinColumn: { name: `authorId`, referencedColumnName: `id` },
