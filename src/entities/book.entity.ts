@@ -60,6 +60,12 @@ export class Book {
   @Column(`varchar`, { length: 50, nullable: false })
   ownerId: string;
 
+  @Column(`string`, { length: 50, nullable: true })
+  borrowed?: string;
+
+  @Column(`boolean`, { nullable: false })
+  active: boolean;
+
   constructor(
     id: string,
     title: string,
@@ -73,10 +79,12 @@ export class Book {
     serieId: string,
     ownerId: string,
     editorialId: string,
+    active: boolean,
     edition?: string,
     downloadLink?: string,
     cover?: string,
-    buyDate?: string
+    buyDate?: string,
+    borrowed?: string
   ) {
     this.id = id;
     this.title = title;
@@ -94,5 +102,7 @@ export class Book {
     this.cover = cover;
     this.buyDate = buyDate;
     this.ownerId = ownerId;
+    this.active = active;
+    this.borrowed = borrowed;
   }
 }

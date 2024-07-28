@@ -3,7 +3,6 @@ import { BooksModule } from '@modules/books/books.module';
 import { EditorialsModule } from '@modules/editorials/editorials.module';
 import { GenresModule } from '@modules/genres/genres.module';
 import { MangaModule } from '@modules/manga/manga.module';
-import { SeriesModule } from '@modules/series/series.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { databaseConfig } from 'private/database.config';
@@ -27,8 +26,7 @@ function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
     BooksModule,
     EditorialsModule,
     GenresModule,
-    MangaModule,
-    SeriesModule
+    MangaModule
   ],
   controllers: [],
   providers: []

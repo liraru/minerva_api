@@ -10,14 +10,17 @@ export class AuthorsQueryBuilderService {
   ) {}
 
   get(): Promise<Author[]> {
-    return this._authorsRepo.find({ order: { lastname: 'ASC', name: 'ASC' } });
+    return this._authorsRepo.find({
+      order: { lastname: 'ASC', name: 'ASC' },
+      where: { active: true }
+    });
   }
 
-  public getById(id: string): Promise<Author> {
+  getById(id: string): Promise<Author> {
     return this._authorsRepo.findOne({ where: { id: id } });
   }
 
-  public getFullById(id: string): Promise<Author> {
+  getFullById(id: string): Promise<Author> {
     return this._authorsRepo.findOne({
       relations: { books: true, series: true, mangas: true },
       where: { id: id }
