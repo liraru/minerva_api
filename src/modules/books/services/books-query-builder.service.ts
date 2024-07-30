@@ -48,12 +48,8 @@ export class BooksQueryBuilderService {
     return this._booksRepo.update(id, book);
   }
 
-  activate(id: string): Promise<UpdateResult> {
-    return this._booksRepo.update(id, { active: true });
-  }
-
-  deactivate(id: string): Promise<UpdateResult> {
-    return this._booksRepo.update(id, { active: false });
+  changeActive(id: string, isActive: boolean): Promise<UpdateResult> {
+    return this._booksRepo.update(id, { active: isActive });
   }
 
   delete(id: string): Promise<DeleteResult> {

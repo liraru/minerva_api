@@ -40,7 +40,7 @@ export class Book {
   publicationDate: string;
 
   @ManyToOne(() => Serie, (serie) => serie.books)
-  serie: string;
+  serie?: string;
 
   @Column(`integer`, { nullable: true })
   edition?: string;
@@ -60,7 +60,7 @@ export class Book {
   @Column(`varchar`, { length: 50, nullable: false })
   ownerId: string;
 
-  @Column(`string`, { length: 50, nullable: true })
+  @Column(`varchar`, { length: 50, nullable: true })
   borrowed?: string;
 
   @Column(`boolean`, { nullable: false })

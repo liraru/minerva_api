@@ -11,6 +11,7 @@ const environment: 'local' | 'develop' = 'local';
 
 function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
   console.log(`>>>>> Initializing with ${host} data <<<<<`.toUpperCase());
+
   switch (host) {
     case 'local':
       return databaseConfig.mysql_local as TypeOrmModuleOptions;
@@ -31,4 +32,6 @@ function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
   controllers: [],
   providers: []
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {}
+}
