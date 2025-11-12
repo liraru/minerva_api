@@ -1,8 +1,8 @@
-import { AuthorsModule } from '@modules/authors/authors.module';
-import { BooksModule } from '@modules/books/books.module';
-import { EditorialsModule } from '@modules/editorials/editorials.module';
-import { GenresModule } from '@modules/genres/genres.module';
-import { MangaModule } from '@modules/manga/manga.module';
+import { AuthorsModule } from '@modules/authors.module';
+import { BooksModule } from '@modules/books.module';
+import { EditorialsModule } from '@modules/editorials.module';
+import { GenresModule } from '@modules/genres.module';
+import { MangaModule } from '@modules/manga.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { databaseConfig } from 'private/database.config';

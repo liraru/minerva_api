@@ -1,5 +1,5 @@
 import { ENTITIES } from '@config/index';
-import { Book, Serie, Manga } from '@entities/index';
+import { Book, Manga, Serie } from '@entities/index';
 import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.AUTHOR })

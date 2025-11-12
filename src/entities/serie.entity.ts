@@ -1,6 +1,5 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Book } from 'src/entities/book.entity';
+import { ENTITIES } from '@config/index';
+import { Author, Book } from '@entities/index';
 import {
   Column,
   Entity,
