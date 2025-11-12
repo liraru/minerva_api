@@ -3,12 +3,12 @@ import { Author } from 'src/entities/author.entity';
 import { Editorial } from 'src/entities/editorial.entity';
 import { Genre } from 'src/entities/genre.entity';
 import { MangaChapter } from 'src/entities/manga-chapter.entity';
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.MANGA })
 export class Manga {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: number;
 
   @Column(`varchar`, { length: 150, nullable: false })
   title: string;
@@ -52,7 +52,7 @@ export class Manga {
   language: string;
 
   constructor(
-    id: string,
+    id: number,
     title: string,
     isDigital: boolean,
     cover: string,

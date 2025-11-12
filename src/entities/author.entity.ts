@@ -1,13 +1,11 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Book } from 'src/entities/book.entity';
-import { Manga } from 'src/entities/manga.entity';
-import { Serie } from 'src/entities/serie.entity';
-import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
+import { ENTITIES } from '@config/index';
+import { Book, Serie, Manga } from '@entities/index';
+import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.AUTHOR })
 export class Author {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: number;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
@@ -37,7 +35,7 @@ export class Author {
   mangas?: Manga[];
 
   constructor(
-    id: string,
+    id: number,
     name: string,
     lastname?: string,
     birthDate?: string,

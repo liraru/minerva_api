@@ -1,12 +1,20 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Author } from 'src/entities/author.entity';
 import { Book } from 'src/entities/book.entity';
-import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  OneToMany,
+  PrimaryColumn,
+  PrimaryGeneratedColumn
+} from 'typeorm';
 
 @Entity({ name: ENTITIES.SERIE })
 export class Serie {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: number;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
@@ -32,7 +40,7 @@ export class Serie {
   authors: Author[];
 
   constructor(
-    id: string,
+    id: number,
     name: string,
     volumes: number,
     releaseDate: string,

@@ -1,14 +1,19 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Editorial } from 'src/entities/editorial.entity';
-import { Genre } from 'src/entities/genre.entity';
-import { Serie } from 'src/entities/serie.entity';
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn
+} from 'typeorm';
+import { ENTITIES } from '@config/index';
+import { Author, Genre, Serie, Editorial } from '@entities/index';
 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
-  id: string;
+  @PrimaryGeneratedColumn('uuid')
+  id: number;
 
   @Column(`varchar`, { length: 50, nullable: false })
   title: string;
@@ -67,7 +72,7 @@ export class Book {
   active: boolean;
 
   constructor(
-    id: string,
+    id: number,
     title: string,
     authors: Author[],
     format: string,
