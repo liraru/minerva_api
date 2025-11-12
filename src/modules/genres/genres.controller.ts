@@ -1,12 +1,16 @@
+import { Genre } from '@entities/index';
+import { GenresService } from '@modules/genres';
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { GenresService } from '@modules/genres/services/genres.service';
-import { Genre } from '@entities/genre.entity';
+import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('genres')
 @Controller('genres')
 export class GenresController {
   constructor(private readonly _genresService: GenresService) {}
 
   @Get(``)
+  @ApiOperation({ summary: 'Get all genres' })
+  @ApiResponse({ status: 200, description: '', example: [{}] })
   public getList() {
     return this._genresService.getList();
   }

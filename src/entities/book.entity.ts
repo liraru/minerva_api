@@ -1,14 +1,13 @@
+import { ENTITIES } from '@config/index';
+import { Author, Editorial, Genre, Location, Serie } from '@entities/index';
 import {
   Column,
   Entity,
   JoinTable,
   ManyToMany,
   ManyToOne,
-  PrimaryColumn,
   PrimaryGeneratedColumn
 } from 'typeorm';
-import { ENTITIES } from '@config/index';
-import { Author, Genre, Serie, Editorial, Location } from '@entities/index';
 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {
