@@ -20,14 +20,13 @@ export class GenresService {
   }
 
   async create(name: string): Promise<Genre> {
-    const id = uuidv4();
-    const result = await this._genresQB.create(id, name);
+    const result = await this._genresQB.create(name);
     if (!result)
       throw new HttpException(
         `There was an error creating the genre`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return this.getById(id);
+    return this.getById(result.identifiers[0]!.id);
   }
 
   async update(id: string, genre: Genre): Promise<Genre> {

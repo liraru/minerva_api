@@ -5,3 +5,4 @@ export * from './genre.entity';
 export * from './manga-chapter.entity';
 export * from './manga.entity';
 export * from './serie.entity';
+export * from './location.entity';

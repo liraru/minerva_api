@@ -1,11 +1,16 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Manga } from 'src/entities/manga.entity';
-import { Column, Entity, ManyToOne, PrimaryColumn, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  PrimaryGeneratedColumn
+} from 'typeorm';
 
 @Entity({ name: ENTITIES.MANGA_CHAPTERS })
 export class MangaChapter {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @ManyToOne(() => Manga, (manga) => manga.mangaChapter)
   manga: Manga;
@@ -19,7 +24,13 @@ export class MangaChapter {
   @Column(`varchar`, { length: 50, nullable: true })
   publicationDate: string;
 
-  constructor(id: number, manga: Manga, pages: number, folder: string, publicationDate: string) {
+  constructor(
+    manga: Manga,
+    pages: number,
+    folder: string,
+    publicationDate: string,
+    id?: string
+  ) {
     this.id = id;
     this.manga = manga;
     this.pages = pages;

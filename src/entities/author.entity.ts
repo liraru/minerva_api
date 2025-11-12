@@ -5,7 +5,7 @@ import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
 @Entity({ name: ENTITIES.AUTHOR })
 export class Author {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
@@ -35,8 +35,8 @@ export class Author {
   mangas?: Manga[];
 
   constructor(
-    id: number,
     name: string,
+    id?: string,
     lastname?: string,
     birthDate?: string,
     deceasedDate?: string,

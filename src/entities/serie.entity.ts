@@ -7,14 +7,13 @@ import {
   JoinTable,
   ManyToMany,
   OneToMany,
-  PrimaryColumn,
   PrimaryGeneratedColumn
 } from 'typeorm';
 
 @Entity({ name: ENTITIES.SERIE })
 export class Serie {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
@@ -40,13 +39,13 @@ export class Serie {
   authors: Author[];
 
   constructor(
-    id: number,
     name: string,
     volumes: number,
     releaseDate: string,
     finishDate: string,
     books: Book[],
-    authors: Author[]
+    authors: Author[],
+    id?: string
   ) {
     this.id = id;
     this.name = name;
