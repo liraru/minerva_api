@@ -21,7 +21,8 @@
       "@modules/*": ["src/modules/*"],
       "@entities/*": ["src/entities/*"],
       "@config/*": ["src/config/*"],
-      "@services/*": ["src/services/*"]
+      "@services/*": ["src/services/*"],
+      "@constants/*": ["src/constants/*"]
     }
   }
 }

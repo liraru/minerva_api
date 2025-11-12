@@ -1,13 +1,19 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Editorial } from 'src/entities/editorial.entity';
-import { Genre } from 'src/entities/genre.entity';
-import { MangaChapter } from 'src/entities/manga-chapter.entity';
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  PrimaryColumn,
+  PrimaryGeneratedColumn
+} from 'typeorm';
+import { Author, Editorial, Genre, MangaChapter, Location } from '@entities/index';
+import { ENTITIES } from '@config/index';
 
 @Entity({ name: ENTITIES.MANGA })
 export class Manga {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column(`varchar`, { length: 150, nullable: false })
@@ -33,6 +39,9 @@ export class Manga {
   @ManyToOne(() => Genre, (genre) => genre.mangas)
   genre: Genre;
 
+  @ManyToOne(() => Location, (location) => location.mangas)
+  location: Location;
+
   @OneToMany(() => MangaChapter, (chapter) => chapter.id)
   mangaChapter?: MangaChapter[];
 
@@ -52,7 +61,6 @@ export class Manga {
   language: string;
 
   constructor(
-    id: string,
     title: string,
     isDigital: boolean,
     cover: string,
@@ -62,6 +70,7 @@ export class Manga {
     firstVolumeDate: string,
     originalLanguage: string,
     language: string,
+    id?: string,
     lastVolumeDate?: string,
     mangaChapter?: MangaChapter[]
   ) {

@@ -5,15 +5,17 @@ import { Repository, InsertResult, UpdateResult, DeleteResult } from 'typeorm';
 
 @Injectable()
 export class EditorialsQueryBuilderService {
-  constructor(@InjectRepository(Editorial) private readonly _editorialRepo: Repository<Editorial>) {}
+  constructor(
+    @InjectRepository(Editorial) private readonly _editorialRepo: Repository<Editorial>
+  ) {}
 
   get(id?: string): Promise<Editorial[]> {
     if (id) return this._editorialRepo.find({ where: { id } });
     return this._editorialRepo.find({ order: { name: 'ASC' } });
   }
 
-  create(id: string, name: string): Promise<InsertResult> {
-    return this._editorialRepo.insert(new Editorial(id, name));
+  create(name: string): Promise<InsertResult> {
+    return this._editorialRepo.insert(new Editorial(name));
   }
 
   update(id: string, editorial: Editorial): Promise<UpdateResult> {

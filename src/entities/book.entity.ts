@@ -1,13 +1,18 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Editorial } from 'src/entities/editorial.entity';
-import { Genre } from 'src/entities/genre.entity';
-import { Serie } from 'src/entities/serie.entity';
-import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  PrimaryColumn,
+  PrimaryGeneratedColumn
+} from 'typeorm';
+import { ENTITIES } from '@config/index';
+import { Author, Genre, Serie, Editorial, Location } from '@entities/index';
 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
@@ -21,14 +26,17 @@ export class Book {
   })
   authors: Author[];
 
+  @Column(`boolean`, { nullable: false })
+  isDigital: boolean = false;
+
   @Column(`varchar`, { length: 50, nullable: false })
   format: string;
 
-  @Column(`varchar`, { length: 10, nullable: true })
-  shelfCode: string;
+  @ManyToOne(() => Location, (location) => location.books)
+  location: Location;
 
   @ManyToOne(() => Genre, (genre) => genre.books)
-  genre: string;
+  genre: Genre;
 
   @Column(`varchar`, { length: 3, nullable: false })
   language: string;
@@ -40,13 +48,13 @@ export class Book {
   publicationDate: string;
 
   @ManyToOne(() => Serie, (serie) => serie.books)
-  serie: string;
+  serie?: Serie;
 
   @Column(`integer`, { nullable: true })
   edition?: string;
 
   @ManyToOne(() => Editorial, (editorial) => editorial.books)
-  editorial: string;
+  editorial: Editorial;
 
   @Column(`varchar`, { length: 150, nullable: true })
   downloadLink?: string;
@@ -58,41 +66,53 @@ export class Book {
   buyDate?: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
-  ownerId: string;
+  ownerId: number;
+
+  @Column(`varchar`, { length: 50, nullable: true })
+  borrowed?: string;
+
+  @Column(`boolean`, { nullable: false })
+  active: boolean;
 
   constructor(
-    id: string,
     title: string,
+    isDigital: boolean,
     authors: Author[],
     format: string,
-    location: string,
-    genreId: string,
+    location: Location,
+    genre: Genre,
     language: string,
     originalLanguage: string,
     publicationDate: string,
-    serieId: string,
-    ownerId: string,
-    editorialId: string,
+    serie: Serie,
+    ownerId: number,
+    editorial: Editorial,
+    active: boolean,
+    id?: string,
     edition?: string,
     downloadLink?: string,
     cover?: string,
-    buyDate?: string
+    buyDate?: string,
+    borrowed?: string
   ) {
     this.id = id;
     this.title = title;
     this.authors = authors;
+    this.isDigital = isDigital;
     this.format = format;
-    this.shelfCode = location;
-    this.genre = genreId;
+    this.location = location;
+    this.genre = genre;
     this.language = language;
     this.originalLanguage = originalLanguage;
     this.publicationDate = publicationDate;
-    this.serie = serieId;
+    this.serie = serie;
     this.edition = edition;
-    this.editorial = editorialId;
+    this.editorial = editorial;
     this.downloadLink = downloadLink;
     this.cover = cover;
     this.buyDate = buyDate;
     this.ownerId = ownerId;
+    this.active = active;
+    this.borrowed = borrowed;
   }
 }
