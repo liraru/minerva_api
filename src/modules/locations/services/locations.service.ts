@@ -1,25 +1,28 @@
-import { Genre } from '@entities/index';
-import { GenresQueryBuilderService } from '@modules/genres/services/genres-query-builder.service';
+import { Location } from '@entities/index';
+import { LocationsQueryBuilderService } from '@modules/locations/services/locations-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
 @Injectable()
-export class GenresService {
-  constructor(private readonly _genresQB: GenresQueryBuilderService) {}
+export class LocationsService {
+  constructor(private readonly _genresQB: LocationsQueryBuilderService) {}
 
-  async getList(): Promise<Genre[]> {
+  async getList(): Promise<Location[]> {
     return await this._genresQB.get();
   }
 
-  async getById(id: string): Promise<Genre> {
+  async getById(id: string): Promise<Location> {
     const items = await this._genresQB.get(id);
     if (!items.length) {
-      throw new HttpException(`Genre with ID ${id} doesn't exist.`, HttpStatus.NOT_FOUND);
+      throw new HttpException(
+        `Location with ID ${id} doesn't exist.`,
+        HttpStatus.NOT_FOUND
+      );
     }
     return items[0];
   }
 
-  async create(genre: Genre): Promise<Genre> {
-    const result = await this._genresQB.create(genre);
+  async create(location: Location): Promise<Location> {
+    const result = await this._genresQB.create(location);
     if (!result)
       throw new HttpException(
         `There was an error creating the genre`,
@@ -28,13 +31,13 @@ export class GenresService {
     return this.getById(result.identifiers[0]!.id);
   }
 
-  async update(id: string, genre: Genre): Promise<Genre> {
-    const storagedGenre = await this.getById(id);
-    genre = { ...storagedGenre, ...genre };
+  async update(id: string, genre: Location): Promise<Location> {
+    const storagedLocation = await this.getById(id);
+    genre = { ...storagedLocation, ...genre };
     const result = await this._genresQB.update(id, genre);
     if (!result.affected)
       throw new HttpException(
-        `There was an error updating the Genre`,
+        `There was an error updating the Location`,
         HttpStatus.EXPECTATION_FAILED
       );
     return this.getById(id);
