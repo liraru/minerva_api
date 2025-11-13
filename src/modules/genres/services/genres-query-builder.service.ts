@@ -12,8 +12,8 @@ export class GenresQueryBuilderService {
     return this._genresRepo.find({ order: { name: 'ASC' } });
   }
 
-  create(name: string): Promise<InsertResult> {
-    return this._genresRepo.insert(new Genre(name));
+  create(genre: Genre): Promise<InsertResult> {
+    return this._genresRepo.insert(genre);
   }
 
   update(id: string, genre: Genre): Promise<UpdateResult> {
