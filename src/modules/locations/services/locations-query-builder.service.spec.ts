@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { GenresQueryBuilderService } from './genres-query-builder.service';
+import { LocationsQueryBuilderService } from './locations-query-builder.service';
 
-describe('GenresQueryBuilderService', () => {
-  let service: GenresQueryBuilderService;
+describe('LocationsQueryBuilderService', () => {
+  let service: LocationsQueryBuilderService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [GenresQueryBuilderService]
+      providers: [LocationsQueryBuilderService]
     }).compile();
 
-    service = module.get<GenresQueryBuilderService>(GenresQueryBuilderService);
+    service = module.get<LocationsQueryBuilderService>(LocationsQueryBuilderService);
   });
 
   it('should be defined', () => {
