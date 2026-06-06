@@ -19,6 +19,17 @@ export class SeriesQueryBuilderService {
     });
   }
 
+  search(search: string): Promise<Serie[]> {
+    return this._seriesRepo
+      .createQueryBuilder('serie')
+      .leftJoinAndSelect('serie.authors', 'author')
+      .leftJoinAndSelect('serie.books', 'book')
+      .where('serie.name LIKE :search', { search })
+      .orWhere('author.name LIKE :search', { search })
+      .orWhere('author.lastname LIKE :search', { search })
+      .getMany();
+  }
+
   create(serie: Serie): Promise<InsertResult> {
     return this._seriesRepo.insert(serie);
   }

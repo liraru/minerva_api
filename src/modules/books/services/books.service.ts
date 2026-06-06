@@ -31,7 +31,7 @@ export class BooksService {
   }
 
   async search(search: string): Promise<Book[]> {
-    return await this._booksQB.search(search);
+    return await this._booksQB.search(`%${search}%`);
   }
 
   async create(book: Book): Promise<Book> {

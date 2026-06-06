@@ -1,7 +1,7 @@
 import { Manga } from '@entities/manga.entity';
 import { MangaChaptersService } from '@modules/manga/services/manga-chapters/manga-chapters.service';
 import { MangaService } from '@modules/manga/services/manga/manga.service';
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from '@nestjs/common';
 
 @Controller('manga')
 export class MangaController {
@@ -11,8 +11,14 @@ export class MangaController {
   ) {}
 
   @Get()
-  public getList() {
-    return this._mangaService.getList();
+  public getList(
+    @Query('genreId') genreId?: string,
+    @Query('language') language?: string,
+    @Query('authorId') authorId?: string,
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 20
+  ) {
+    return this._mangaService.getList(page, limit, { genreId, language, authorId });
   }
 
   @Get('/search/:search')

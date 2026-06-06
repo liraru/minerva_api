@@ -7,8 +7,12 @@ import { DeleteResult } from 'typeorm';
 export class MangaService {
   constructor(private readonly _mangaQB: MangaQueryBuilderService) {}
 
-  async getList(): Promise<Manga[]> {
-    return await this._mangaQB.get();
+  async getList(
+    page: number = 1,
+    limit: number = 20,
+    filters: { genreId?: string; language?: string; authorId?: string } = {}
+  ): Promise<Manga[]> {
+    return await this._mangaQB.getAll(page, limit, filters);
   }
 
   async getById(id: string): Promise<Manga> {

@@ -18,22 +18,32 @@ export class BooksQueryBuilderService {
 
   getAll(
     orderColumn: string,
-    order: SORT_DIRECTION,
+    order: 'ASC' | 'DESC',
     page: number = 1,
     limit: number = 20,
     filters: { genreId?: string; language?: string; authorId?: string } = {}
   ): Promise<Book[]> {
-    const where: any = { active: true };
-    if (filters.genreId) where.genre = { id: filters.genreId };
-    if (filters.language) where.language = filters.language;
-    if (filters.authorId) where.authors = { id: filters.authorId };
+    const query = this._booksRepo
+      .createQueryBuilder('book')
+      .leftJoinAndSelect('book.authors', 'author')
+      .leftJoinAndSelect('book.editorial', 'editorial')
+      .leftJoinAndSelect('book.genre', 'genre')
+      .leftJoinAndSelect('book.serie', 'serie')
+      .leftJoinAndSelect('book.location', 'location')
+      .where('book.active = :active', { active: true });
 
-    return this._booksRepo.find({
-      where,
-      order: { [orderColumn]: order },
-      skip: (page - 1) * limit,
-      take: limit
-    });
+    if (filters.genreId)
+      query.andWhere('genre.id = :genreId', { genreId: filters.genreId });
+    if (filters.language)
+      query.andWhere('book.language = :language', { language: filters.language });
+    if (filters.authorId)
+      query.andWhere('author.id = :authorId', { authorId: filters.authorId });
+
+    return query
+      .orderBy(`book.${orderColumn}`, order)
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getMany();
   }
 
   getById(id: string): Promise<Book> {

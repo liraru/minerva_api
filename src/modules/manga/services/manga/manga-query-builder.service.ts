@@ -7,16 +7,44 @@ import { DeleteResult, ILike, InsertResult, Repository, UpdateResult } from 'typ
 export class MangaQueryBuilderService {
   constructor(@InjectRepository(Manga) private readonly _mangaRepo: Repository<Manga>) {}
 
+  getAll(
+    page: number = 1,
+    limit: number = 20,
+    filters: { genreId?: string; language?: string; authorId?: string } = {}
+  ): Promise<Manga[]> {
+    const query = this._mangaRepo
+      .createQueryBuilder('manga')
+      .leftJoinAndSelect('manga.authors', 'author')
+      .leftJoinAndSelect('manga.editorial', 'editorial')
+      .leftJoinAndSelect('manga.genre', 'genre')
+      .leftJoinAndSelect('manga.location', 'location');
+
+    if (filters.genreId)
+      query.andWhere('genre.id = :genreId', { genreId: filters.genreId });
+    if (filters.language)
+      query.andWhere('manga.language = :language', { language: filters.language });
+    if (filters.authorId)
+      query.andWhere('author.id = :authorId', { authorId: filters.authorId });
+
+    return query
+      .orderBy('manga.title', 'ASC')
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getMany();
+  }
+
   get(id?: string): Promise<Manga[]> {
-    if (id)
-      return this._mangaRepo.find({
-        relations: ['authors', 'editorial', 'genre', 'location'],
-        where: { id }
-      });
-    return this._mangaRepo.find({
-      relations: ['authors', 'editorial', 'genre', 'location'],
-      order: { title: 'ASC' }
-    });
+    const query = this._mangaRepo
+      .createQueryBuilder('manga')
+      .leftJoinAndSelect('manga.authors', 'author')
+      .leftJoinAndSelect('manga.editorial', 'editorial')
+      .leftJoinAndSelect('manga.genre', 'genre')
+      .leftJoinAndSelect('manga.location', 'location');
+
+    if (id) query.where('manga.id = :id', { id });
+    else query.orderBy('manga.title', 'ASC');
+
+    return query.getMany();
   }
 
   search(search: string): Promise<Manga[]> {

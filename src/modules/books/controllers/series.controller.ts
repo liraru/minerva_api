@@ -26,6 +26,11 @@ export class SeriesController {
     return this._booksService.getBySerieId(id);
   }
 
+  @Get('/search/:search')
+  public search(@Param('search') search: string) {
+    return this._seriesService.search(search);
+  }
+
   @Post()
   public create(@Body() serie: Serie) {
     return this._seriesService.create(serie);

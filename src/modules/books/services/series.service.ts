@@ -18,6 +18,10 @@ export class SeriesService {
     return items[0];
   }
 
+  async search(search: string): Promise<Serie[]> {
+    return await this._seriesQB.search(`%${search}%`);
+  }
+
   async create(serie: Serie): Promise<Serie> {
     const result = await this._seriesQB.create(serie);
     if (!result)
