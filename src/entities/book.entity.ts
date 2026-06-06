@@ -2,8 +2,16 @@ import { ENTITIES } from '@config/entity-tagging.constant';
 import { Author } from '@entities/author.entity';
 import { Editorial } from '@entities/editorial.entity';
 import { Genre } from '@entities/genre.entity';
+import { Location } from '@entities/location.entity';
 import { Serie } from '@entities/serie.entity';
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, ManyToOne } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  PrimaryGeneratedColumn
+} from 'typeorm';
 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {

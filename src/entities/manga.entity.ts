@@ -2,8 +2,17 @@ import { ENTITIES } from '@config/entity-tagging.constant';
 import { Author } from '@entities/author.entity';
 import { Editorial } from '@entities/editorial.entity';
 import { Genre } from '@entities/genre.entity';
+import { Location } from '@entities/location.entity';
 import { MangaChapter } from '@entities/manga-chapter.entity';
-import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, ManyToOne, OneToMany } from 'typeorm';
+import {
+  Column,
+  Entity,
+  JoinTable,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn
+} from 'typeorm';
 import { MANGA_STATUS } from '../constants/manga.constant';
 
 @Entity({ name: ENTITIES.MANGA })
