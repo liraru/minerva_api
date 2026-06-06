@@ -1,8 +1,8 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Editorial } from 'src/entities/editorial.entity';
-import { Genre } from 'src/entities/genre.entity';
-import { Serie } from 'src/entities/serie.entity';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Author } from '@entities/author.entity';
+import { Editorial } from '@entities/editorial.entity';
+import { Genre } from '@entities/genre.entity';
+import { Serie } from '@entities/serie.entity';
 import { Column, Entity, JoinTable, ManyToMany, ManyToOne, PrimaryColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.BOOK })
@@ -66,6 +66,9 @@ export class Book {
   @Column(`boolean`, { nullable: false })
   active: boolean;
 
+  @Column(`varchar`, { length: 255, nullable: true })
+  notes?: string;
+
   constructor(
     id: string,
     title: string,
@@ -84,7 +87,8 @@ export class Book {
     downloadLink?: string,
     cover?: string,
     buyDate?: string,
-    borrowed?: string
+    borrowed?: string,
+    notes?: string
   ) {
     this.id = id;
     this.title = title;
@@ -104,5 +108,6 @@ export class Book {
     this.ownerId = ownerId;
     this.active = active;
     this.borrowed = borrowed;
+    this.notes = notes;
   }
 }
