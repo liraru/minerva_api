@@ -1,4 +1,38 @@
-import { Controller } from '@nestjs/common';
+import { Manga } from '@entities/manga.entity';
+import { MangaService } from '@modules/manga/services/manga/manga.service';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 
 @Controller('manga')
-export class MangaController {}
+export class MangaController {
+  constructor(private readonly _mangaService: MangaService) {}
+
+  @Get()
+  public getList() {
+    return this._mangaService.getList();
+  }
+
+  @Get('/search/:search')
+  public search(@Param('search') search: string) {
+    return this._mangaService.search(search);
+  }
+
+  @Get('/:id')
+  public getById(@Param('id') id: string) {
+    return this._mangaService.getById(id);
+  }
+
+  @Post()
+  public create(@Body() manga: Manga) {
+    return this._mangaService.create(manga);
+  }
+
+  @Put('/:id')
+  public update(@Param('id') id: string, @Body() manga: Partial<Manga>) {
+    return this._mangaService.update(id, manga);
+  }
+
+  @Delete('/:id')
+  public delete(@Param('id') id: string) {
+    return this._mangaService.delete(id);
+  }
+}
