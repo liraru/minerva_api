@@ -44,10 +44,16 @@ export class BooksQueryBuilderService {
   }
 
   getBySerieId(serieId: string): Promise<Book[]> {
-    return this._booksRepo.find({
-      relations: ['authors', 'editorial', 'genre', 'serie', 'location'],
-      where: { serie: { id: serieId }, active: true }
-    });
+    return this._booksRepo
+      .createQueryBuilder('book')
+      .leftJoinAndSelect('book.authors', 'author')
+      .leftJoinAndSelect('book.editorial', 'editorial')
+      .leftJoinAndSelect('book.genre', 'genre')
+      .leftJoinAndSelect('book.serie', 'serie')
+      .leftJoinAndSelect('book.location', 'location')
+      .where('serie.id = :serieId', { serieId })
+      .andWhere('book.active = :active', { active: true })
+      .getMany();
   }
 
   search(search: string): Promise<Book[]> {
