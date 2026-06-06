@@ -3,20 +3,12 @@ import { Author } from '@entities/author.entity';
 import { Editorial } from '@entities/editorial.entity';
 import { Genre } from '@entities/genre.entity';
 import { MangaChapter } from '@entities/manga-chapter.entity';
-import {
-  Column,
-  Entity,
-  JoinTable,
-  ManyToMany,
-  ManyToOne,
-  OneToMany,
-  PrimaryColumn
-} from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, ManyToOne, OneToMany } from 'typeorm';
 import { MANGA_STATUS } from '../constants/manga.constant';
 
 @Entity({ name: ENTITIES.MANGA })
 export class Manga {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column(`varchar`, { length: 150, nullable: false })
@@ -48,6 +40,9 @@ export class Manga {
   @ManyToOne(() => Genre, (genre) => genre.mangas)
   genre: Genre;
 
+  @ManyToOne(() => Location, (location) => location.mangas)
+  location: Location;
+
   @OneToMany(() => MangaChapter, (chapter) => chapter.id)
   mangaChapter?: MangaChapter[];
 
@@ -67,7 +62,6 @@ export class Manga {
   language: string;
 
   constructor(
-    id: string,
     title: string,
     isDigital: boolean,
     cover: string,
@@ -77,6 +71,7 @@ export class Manga {
     firstVolumeDate: string,
     originalLanguage: string,
     language: string,
+    id?: string,
     lastVolumeDate?: string,
     mangaChapter?: MangaChapter[]
   ) {

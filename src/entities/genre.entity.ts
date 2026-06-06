@@ -1,11 +1,17 @@
 import { ENTITIES } from 'src/config/entity-tagging.constant';
 import { Book } from 'src/entities/book.entity';
 import { Manga } from 'src/entities/manga.entity';
-import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryColumn,
+  PrimaryGeneratedColumn
+} from 'typeorm';
 
 @Entity({ name: ENTITIES.GENRE })
 export class Genre {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
@@ -17,7 +23,7 @@ export class Genre {
   @OneToMany(() => Manga, (manga) => manga.id)
   mangas?: Manga[];
 
-  constructor(id: string, name: string, books?: Book[], mangas?: Manga[]) {
+  constructor(name: string, id?: string, books?: Book[], mangas?: Manga[]) {
     this.id = id;
     this.name = name;
     this.books = books;

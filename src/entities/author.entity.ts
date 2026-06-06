@@ -2,11 +2,11 @@ import { ENTITIES } from '@config/entity-tagging.constant';
 import { Book } from '@entities/book.entity';
 import { Manga } from '@entities/manga.entity';
 import { Serie } from '@entities/serie.entity';
-import { Column, Entity, ManyToMany, PrimaryColumn } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
 
 @Entity({ name: ENTITIES.AUTHOR })
 export class Author {
-  @PrimaryColumn(`varchar`, { length: 50, nullable: false })
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
@@ -40,8 +40,8 @@ export class Author {
   mangas?: Manga[];
 
   constructor(
-    id: string,
     name: string,
+    id?: string,
     lastname?: string,
     birthDate?: string,
     deceasedDate?: string,
