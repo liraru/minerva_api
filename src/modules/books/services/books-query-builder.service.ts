@@ -10,15 +10,29 @@ import {
   Repository,
   UpdateResult
 } from 'typeorm';
+import { SORT_DIRECTION } from '../../../constants/shared.constant';
 
 @Injectable()
 export class BooksQueryBuilderService {
   constructor(@InjectRepository(Book) private readonly _booksRepo: Repository<Book>) {}
 
-  getAll(orderColumn: string, order: 'ASC' | 'DESC'): Promise<Book[]> {
+  getAll(
+    orderColumn: string,
+    order: SORT_DIRECTION,
+    page: number = 1,
+    limit: number = 20,
+    filters: { genreId?: string; language?: string; authorId?: string } = {}
+  ): Promise<Book[]> {
+    const where: any = { active: true };
+    if (filters.genreId) where.genre = { id: filters.genreId };
+    if (filters.language) where.language = filters.language;
+    if (filters.authorId) where.authors = { id: filters.authorId };
+
     return this._booksRepo.find({
-      where: { active: true },
-      order: { [orderColumn]: order }
+      where,
+      order: { [orderColumn]: order },
+      skip: (page - 1) * limit,
+      take: limit
     });
   }
 
@@ -26,6 +40,13 @@ export class BooksQueryBuilderService {
     return this._booksRepo.findOne({
       relations: ['authors', 'editorial', 'genre'],
       where: { id: id }
+    });
+  }
+
+  getBySerieId(serieId: string): Promise<Book[]> {
+    return this._booksRepo.find({
+      relations: ['authors', 'editorial', 'genre', 'serie', 'location'],
+      where: { serie: { id: serieId }, active: true }
     });
   }
 

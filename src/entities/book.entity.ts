@@ -21,6 +21,9 @@ export class Book {
   })
   authors: Author[];
 
+  @Column(`varchar`, { length: 13, nullable: true })
+  isbn?: string;
+
   @Column(`varchar`, { length: 50, nullable: false })
   format: string;
 
@@ -73,6 +76,7 @@ export class Book {
     id: string,
     title: string,
     authors: Author[],
+    isbn: string,
     format: string,
     location: string,
     genreId: string,
@@ -93,6 +97,7 @@ export class Book {
     this.id = id;
     this.title = title;
     this.authors = authors;
+    this.isbn = isbn;
     this.format = format;
     this.shelfCode = location;
     this.genre = genreId;

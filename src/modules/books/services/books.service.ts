@@ -2,20 +2,32 @@ import { Book } from '@entities/book.entity';
 import { BooksQueryBuilderService } from '@modules/books/services/books-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { DeleteResult, UpdateResult } from 'typeorm';
+import { SORT_DIRECTION } from '../../../constants/shared.constant';
 
 @Injectable()
 export class BooksService {
   constructor(private readonly _booksQB: BooksQueryBuilderService) {}
 
   async getList(
+    page: number = 1,
+    limit: number = 20,
     orderColumn: string = 'title',
-    order: 'ASC' | 'DESC' = 'ASC'
+    order: SORT_DIRECTION = SORT_DIRECTION.ASC,
+    filters: {
+      genreId?: string;
+      language?: string;
+      authorId?: string;
+    } = {}
   ): Promise<Book[]> {
-    return await this._booksQB.getAll(orderColumn, order);
+    return await this._booksQB.getAll(orderColumn, order, page, limit, filters);
   }
 
   async getById(id: string): Promise<Book> {
     return await this._booksQB.getById(id);
+  }
+
+  async getBySerieId(serieId: string): Promise<Book[]> {
+    return await this._booksQB.getBySerieId(serieId);
   }
 
   async search(search: string): Promise<Book[]> {

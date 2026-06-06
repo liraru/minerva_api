@@ -1,10 +1,14 @@
 import { Manga } from '@entities/manga.entity';
+import { MangaChaptersService } from '@modules/manga/services/manga-chapters/manga-chapters.service';
 import { MangaService } from '@modules/manga/services/manga/manga.service';
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 
 @Controller('manga')
 export class MangaController {
-  constructor(private readonly _mangaService: MangaService) {}
+  constructor(
+    private readonly _mangaService: MangaService,
+    private readonly _mangaChaptersService: MangaChaptersService
+  ) {}
 
   @Get()
   public getList() {
@@ -19,6 +23,11 @@ export class MangaController {
   @Get('/:id')
   public getById(@Param('id') id: string) {
     return this._mangaService.getById(id);
+  }
+
+  @Get('/:id/chapters')
+  public getChapters(@Param('id') id: string) {
+    return this._mangaChaptersService.getByMangaId(id);
   }
 
   @Post()
