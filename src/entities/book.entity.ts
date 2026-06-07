@@ -1,14 +1,17 @@
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Author } from '@entities/author.entity';
+import { Editorial } from '@entities/editorial.entity';
+import { Genre } from '@entities/genre.entity';
+import { Location } from '@entities/location.entity';
+import { Serie } from '@entities/serie.entity';
 import {
   Column,
   Entity,
   JoinTable,
   ManyToMany,
   ManyToOne,
-  PrimaryColumn,
   PrimaryGeneratedColumn
 } from 'typeorm';
-import { ENTITIES } from '@config/index';
-import { Author, Genre, Serie, Editorial, Location } from '@entities/index';
 
 @Entity({ name: ENTITIES.BOOK })
 export class Book {
@@ -25,6 +28,9 @@ export class Book {
     inverseJoinColumn: { name: `bookId`, referencedColumnName: `id` }
   })
   authors: Author[];
+
+  @Column(`varchar`, { length: 13, nullable: true })
+  isbn?: string;
 
   @Column(`boolean`, { nullable: false })
   isDigital: boolean = false;
@@ -74,10 +80,14 @@ export class Book {
   @Column(`boolean`, { nullable: false })
   active: boolean;
 
+  @Column(`varchar`, { length: 255, nullable: true })
+  notes?: string;
+
   constructor(
     title: string,
     isDigital: boolean,
     authors: Author[],
+    isbn: string,
     format: string,
     location: Location,
     genre: Genre,
@@ -93,11 +103,13 @@ export class Book {
     downloadLink?: string,
     cover?: string,
     buyDate?: string,
-    borrowed?: string
+    borrowed?: string,
+    notes?: string
   ) {
     this.id = id;
     this.title = title;
     this.authors = authors;
+    this.isbn = isbn;
     this.isDigital = isDigital;
     this.format = format;
     this.location = location;
@@ -114,5 +126,6 @@ export class Book {
     this.ownerId = ownerId;
     this.active = active;
     this.borrowed = borrowed;
+    this.notes = notes;
   }
 }

@@ -5,6 +5,7 @@
 
 # privates
 /private
+!/private/database.config.example.ts
 
 # Logs
 logs

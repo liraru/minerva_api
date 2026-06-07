@@ -1,6 +1,8 @@
-import { ENTITIES } from '@config/index';
-import { Book, Serie, Manga } from '@entities/index';
-import { Column, Entity, ManyToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Book } from '@entities/book.entity';
+import { Manga } from '@entities/manga.entity';
+import { Serie } from '@entities/serie.entity';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
 
 @Entity({ name: ENTITIES.AUTHOR })
 export class Author {
@@ -12,6 +14,9 @@ export class Author {
 
   @Column(`varchar`, { length: 50, nullable: true })
   lastname?: string;
+
+  @Column(`varchar`, { length: 255, nullable: true })
+  biography?: string;
 
   @Column(`varchar`, { length: 10, nullable: true })
   birthdate?: string;
@@ -54,5 +59,6 @@ export class Author {
     this.books = books;
     this.series = series;
     this.mangas = mangas;
+    this.active = true;
   }
 }

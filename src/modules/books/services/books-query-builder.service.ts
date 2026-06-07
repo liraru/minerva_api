@@ -10,16 +10,40 @@ import {
   Repository,
   UpdateResult
 } from 'typeorm';
+import { SORT_DIRECTION } from '../../../constants/shared.constant';
 
 @Injectable()
 export class BooksQueryBuilderService {
   constructor(@InjectRepository(Book) private readonly _booksRepo: Repository<Book>) {}
 
-  getAll(orderColumn: string, order: 'ASC' | 'DESC'): Promise<Book[]> {
-    return this._booksRepo.find({
-      where: { active: true },
-      order: { [orderColumn]: order }
-    });
+  getAll(
+    orderColumn: string,
+    order: 'ASC' | 'DESC',
+    page: number = 1,
+    limit: number = 20,
+    filters: { genreId?: string; language?: string; authorId?: string } = {}
+  ): Promise<Book[]> {
+    const query = this._booksRepo
+      .createQueryBuilder('book')
+      .leftJoinAndSelect('book.authors', 'author')
+      .leftJoinAndSelect('book.editorial', 'editorial')
+      .leftJoinAndSelect('book.genre', 'genre')
+      .leftJoinAndSelect('book.serie', 'serie')
+      .leftJoinAndSelect('book.location', 'location')
+      .where('book.active = :active', { active: true });
+
+    if (filters.genreId)
+      query.andWhere('genre.id = :genreId', { genreId: filters.genreId });
+    if (filters.language)
+      query.andWhere('book.language = :language', { language: filters.language });
+    if (filters.authorId)
+      query.andWhere('author.id = :authorId', { authorId: filters.authorId });
+
+    return query
+      .orderBy(`book.${orderColumn}`, order)
+      .skip((page - 1) * limit)
+      .take(limit)
+      .getMany();
   }
 
   getById(id: string): Promise<Book> {
@@ -27,6 +51,19 @@ export class BooksQueryBuilderService {
       relations: ['authors', 'editorial', 'genre'],
       where: { id: id }
     });
+  }
+
+  getBySerieId(serieId: string): Promise<Book[]> {
+    return this._booksRepo
+      .createQueryBuilder('book')
+      .leftJoinAndSelect('book.authors', 'author')
+      .leftJoinAndSelect('book.editorial', 'editorial')
+      .leftJoinAndSelect('book.genre', 'genre')
+      .leftJoinAndSelect('book.serie', 'serie')
+      .leftJoinAndSelect('book.location', 'location')
+      .where('serie.id = :serieId', { serieId })
+      .andWhere('book.active = :active', { active: true })
+      .getMany();
   }
 
   search(search: string): Promise<Book[]> {

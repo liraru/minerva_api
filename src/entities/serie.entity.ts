@@ -1,13 +1,13 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Book } from 'src/entities/book.entity';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Author } from '@entities/author.entity';
+import { Book } from '@entities/book.entity';
 import {
-  Column,
   Entity,
-  JoinTable,
-  ManyToMany,
+  PrimaryGeneratedColumn,
+  Column,
   OneToMany,
-  PrimaryGeneratedColumn
+  ManyToMany,
+  JoinTable
 } from 'typeorm';
 
 @Entity({ name: ENTITIES.SERIE })
@@ -17,6 +17,9 @@ export class Serie {
 
   @Column(`varchar`, { length: 50, nullable: false })
   name: string;
+
+  @Column(`varchar`, { length: 255, nullable: true })
+  description?: string;
 
   @Column(`integer`, { nullable: false })
   volumes: number;

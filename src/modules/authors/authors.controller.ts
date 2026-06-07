@@ -31,8 +31,8 @@ export class AuthorsController {
     this._authorsService.changeActive(id, true);
   }
 
-  @Delete(`/:id/deactivate`)
-  public delete(@Param(`id`) id: string) {
+  @Patch(`/:id/deactivate`)
+  public deactivate(@Param(`id`) id: string) {
     this._authorsService.changeActive(id, false);
   }
 }

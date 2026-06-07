@@ -1,14 +1,38 @@
 import { Book } from '@entities/book.entity';
 import { BooksService } from '@modules/books/services/books.service';
-import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Patch,
+  Post,
+  Put,
+  Query
+} from '@nestjs/common';
+import { query } from 'express';
+import { SORT_DIRECTION } from '../../../constants/shared.constant';
 
 @Controller('books')
 export class BooksController {
   constructor(private readonly _booksService: BooksService) {}
 
   @Get(``)
-  public getList() {
-    return this._booksService.getList();
+  public getList(
+    @Query('genreId') genreId?: string,
+    @Query('language') language?: string,
+    @Query('authorId') authorId?: string,
+    @Query('page') page: number = 1,
+    @Query('limit') limit: number = 20,
+    @Query('sortBy') sortBy: string = 'title',
+    @Query('sortOrder') sortOrder: SORT_DIRECTION = SORT_DIRECTION.ASC
+  ) {
+    return this._booksService.getList(page, limit, sortBy, sortOrder, {
+      genreId,
+      language,
+      authorId
+    });
   }
 
   @Get(`/:id`)
