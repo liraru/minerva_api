@@ -1,6 +1,6 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Book } from 'src/entities/book.entity';
-import { Manga } from 'src/entities/manga.entity';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Book } from '@entities/book.entity';
+import { Manga } from '@entities/manga.entity';
 import {
   Column,
   Entity,
