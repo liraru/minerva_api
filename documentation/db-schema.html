@@ -524,6 +524,7 @@
         <div class="tfields">
           <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
           <div class="tfield"><span class="fbadge col">col</span><span class="fname">title</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">isbn</span><span class="ftype">varchar(13)</span></div>
           <div class="tfield"><span class="fbadge col">col</span><span class="fname">isDigital</span><span class="ftype">boolean</span></div>
           <div class="tfield"><span class="fbadge col">col</span><span class="fname">format</span><span class="ftype">varchar(50)</span></div>
           <div class="tfield"><span class="fbadge col">col</span><span class="fname">language</span><span class="ftype">varchar(3)</span></div>
@@ -725,6 +726,7 @@
           <tbody>
             <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">title</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Título del libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">isbn</td><td class="td-type">VARCHAR(13)</td><td class="null-no">NO</td><td class="td-desc">Número de identificación internacional del libro</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">isDigital</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">True si es un libro digital (ebook)</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">format</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Formato físico: tapa blanda, tapa dura, etc.</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">language</td><td class="td-type">VARCHAR(3)</td><td class="null-no">NO</td><td class="td-desc">Idioma de la copia (código ISO 639-2)</td></tr>
@@ -736,6 +738,7 @@
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">buyDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de compra YYYY-MM-DD</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">ownerId</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Identificador del propietario del libro</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">borrowed</td><td class="td-type">VARCHAR(50)</td><td class="null-yes">SÍ</td><td class="td-desc">Nombre/ID de quien tiene prestado el libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">notes</td><td class="td-type">VARCHAR(255)</td><td class="null-yes">SÍ</td><td class="td-desc">Notas adicionales sobre el libro</td></tr>
             <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">active</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">Soft-delete; false = libro desactivado</td></tr>
             <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">editorialId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a editorials.id — ManyToOne</td></tr>
             <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">genreId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a genres.id — ManyToOne</td></tr>
