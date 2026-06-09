@@ -18,7 +18,7 @@ export class Book {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column(`varchar`, { length: 50, nullable: false })
+  @Column(`varchar`, { length: 150, nullable: false })
   title: string;
 
   @ManyToMany(() => Author, (author) => author.books, { cascade: true })
@@ -32,16 +32,16 @@ export class Book {
   @Column(`varchar`, { length: 13, nullable: true })
   isbn?: string;
 
-  @Column(`boolean`, { nullable: false })
-  isDigital: boolean = false;
+  @Column(`boolean`, { nullable: false, default: false })
+  isDigital: boolean;
 
   @Column(`varchar`, { length: 50, nullable: false })
   format: string;
 
-  @ManyToOne(() => Location, (location) => location.books)
+  @ManyToOne(() => Location, (location) => location.books, { nullable: true })
   location: Location;
 
-  @ManyToOne(() => Genre, (genre) => genre.books)
+  @ManyToOne(() => Genre, (genre) => genre.books, { nullable: true })
   genre: Genre;
 
   @Column(`varchar`, { length: 3, nullable: false })
@@ -53,13 +53,13 @@ export class Book {
   @Column(`varchar`, { length: 10, nullable: false })
   publicationDate: string;
 
-  @ManyToOne(() => Serie, (serie) => serie.books)
+  @ManyToOne(() => Serie, (serie) => serie.books, { nullable: true })
   serie?: Serie;
 
   @Column(`integer`, { nullable: true })
-  edition?: string;
+  edition?: number;
 
-  @ManyToOne(() => Editorial, (editorial) => editorial.books)
+  @ManyToOne(() => Editorial, (editorial) => editorial.books, { nullable: true })
   editorial: Editorial;
 
   @Column(`varchar`, { length: 150, nullable: true })
@@ -77,7 +77,7 @@ export class Book {
   @Column(`varchar`, { length: 50, nullable: true })
   borrowed?: string;
 
-  @Column(`boolean`, { nullable: false })
+  @Column(`boolean`, { nullable: false, default: true })
   active: boolean;
 
   @Column(`varchar`, { length: 255, nullable: true })
@@ -99,7 +99,7 @@ export class Book {
     editorial: Editorial,
     active: boolean,
     id?: string,
-    edition?: string,
+    edition?: number,
     downloadLink?: string,
     cover?: string,
     buyDate?: string,
