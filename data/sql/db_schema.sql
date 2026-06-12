@@ -80,11 +80,11 @@ CREATE TABLE `authors` (
   `id` varchar(36) NOT NULL,
   `name` varchar(50) NOT NULL,
   `lastname` varchar(50) DEFAULT NULL,
+  `biography` varchar(255) DEFAULT NULL,
   `birthdate` varchar(10) DEFAULT NULL,
   `deceasedDate` varchar(10) DEFAULT NULL,
   `active` tinyint NOT NULL DEFAULT '1',
   `countryId` varchar(50) DEFAULT NULL,
-  `biography` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -98,6 +98,8 @@ DROP TABLE IF EXISTS `books`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `books` (
   `id` varchar(36) NOT NULL,
+  `title` varchar(150) NOT NULL,
+  `isbn` varchar(13) DEFAULT NULL,
   `isDigital` tinyint NOT NULL DEFAULT '0',
   `format` varchar(50) NOT NULL,
   `language` varchar(3) NOT NULL,
@@ -110,13 +112,11 @@ CREATE TABLE `books` (
   `ownerId` varchar(50) NOT NULL,
   `borrowed` varchar(50) DEFAULT NULL,
   `active` tinyint NOT NULL DEFAULT '1',
+  `notes` varchar(255) DEFAULT NULL,
   `locationId` varchar(36) DEFAULT NULL,
   `genreId` varchar(36) DEFAULT NULL,
   `serieId` varchar(36) DEFAULT NULL,
   `editorialId` varchar(36) DEFAULT NULL,
-  `isbn` varchar(13) DEFAULT NULL,
-  `notes` varchar(255) DEFAULT NULL,
-  `title` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_c8f30cf56cbaec50fb4c19711b7` (`locationId`),
   KEY `FK_331478ffd59f87a68b1255b2b6a` (`genreId`),
@@ -166,10 +166,10 @@ DROP TABLE IF EXISTS `locations`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `locations` (
   `id` varchar(36) NOT NULL,
-  `observations` varchar(250) DEFAULT NULL,
   `address` varchar(50) NOT NULL,
   `room` varchar(50) NOT NULL,
   `shelf` varchar(50) NOT NULL,
+  `observations` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -203,6 +203,8 @@ DROP TABLE IF EXISTS `mangas`;
 CREATE TABLE `mangas` (
   `id` varchar(36) NOT NULL,
   `title` varchar(150) NOT NULL,
+  `synopsis` varchar(255) DEFAULT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'ongoing',
   `isDigital` tinyint NOT NULL,
   `cover` varchar(150) DEFAULT NULL,
   `volumes` int NOT NULL,
@@ -213,8 +215,6 @@ CREATE TABLE `mangas` (
   `editorialId` varchar(36) DEFAULT NULL,
   `genreId` varchar(36) DEFAULT NULL,
   `locationId` varchar(36) DEFAULT NULL,
-  `synopsis` varchar(255) DEFAULT NULL,
-  `status` varchar(20) NOT NULL DEFAULT 'ongoing',
   PRIMARY KEY (`id`),
   KEY `FK_33c919121aeca8c3d722ce0e4ac` (`editorialId`),
   KEY `FK_21dd0f0a19acfce2e3f6be58472` (`genreId`),
@@ -235,10 +235,10 @@ DROP TABLE IF EXISTS `series`;
 CREATE TABLE `series` (
   `id` varchar(36) NOT NULL,
   `name` varchar(50) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   `volumes` int NOT NULL,
   `releaseDate` varchar(10) DEFAULT NULL,
   `finishDate` varchar(10) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -252,4 +252,4 @@ CREATE TABLE `series` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-09 13:25:54
+-- Dump completed on 2026-06-12 11:39:17

@@ -1,14 +1,13 @@
 import { Editorial } from '@entities/editorial.entity';
 import { EditorialsQueryBuilderService } from '@modules/editorials/services/editorials-query-builder/editorials-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class EditorialsService {
   constructor(private readonly _editorialsQB: EditorialsQueryBuilderService) {}
 
   async getList(): Promise<Editorial[]> {
-    return await this._editorialsQB.get();
+    return this._editorialsQB.get();
   }
 
   async getById(id: string): Promise<Editorial> {
@@ -24,33 +23,35 @@ export class EditorialsService {
 
   async create(name: string): Promise<Editorial> {
     const result = await this._editorialsQB.create(name);
-    if (!result)
+    if (!result) {
       throw new HttpException(
         `There was an error creating the editorial`,
         HttpStatus.EXPECTATION_FAILED
       );
+    }
     return this.getById(result.identifiers[0]!.id);
   }
 
-  async update(id: string, genre: Editorial): Promise<Editorial> {
-    const storagedGenre = await this.getById(id);
-    genre = { ...storagedGenre, ...genre };
-    const result = await this._editorialsQB.update(id, genre);
-    if (!result.affected)
+  async update(id: string, editorial: Editorial): Promise<Editorial> {
+    const stored = await this.getById(id);
+    const merged = { ...stored, ...editorial };
+    const result = await this._editorialsQB.update(id, merged);
+    if (!result.affected) {
       throw new HttpException(
         `There was an error updating the editorial`,
         HttpStatus.EXPECTATION_FAILED
       );
+    }
     return this.getById(id);
   }
 
   async delete(id: string): Promise<void> {
     const result = await this._editorialsQB.delete(id);
-    if (!result.affected)
+    if (!result.affected) {
       throw new HttpException(
         `There was an error deleting the editorial`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return null;
+    }
   }
 }

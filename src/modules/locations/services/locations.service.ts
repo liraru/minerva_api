@@ -7,7 +7,7 @@ export class LocationsService {
   constructor(private readonly _locationsQB: LocationsQueryBuilderService) {}
 
   async getList(): Promise<Location[]> {
-    return await this._locationsQB.get();
+    return this._locationsQB.get();
   }
 
   async getById(id: string): Promise<Location> {
@@ -23,33 +23,35 @@ export class LocationsService {
 
   async create(location: Location): Promise<Location> {
     const result = await this._locationsQB.create(location);
-    if (!result)
+    if (!result) {
       throw new HttpException(
         `There was an error creating the location`,
         HttpStatus.EXPECTATION_FAILED
       );
+    }
     return this.getById(result.identifiers[0]!.id);
   }
 
   async update(id: string, location: Location): Promise<Location> {
-    const storedLocation = await this.getById(id);
-    location = { ...storedLocation, ...location };
-    const result = await this._locationsQB.update(id, location);
-    if (!result.affected)
+    const stored = await this.getById(id);
+    const merged = { ...stored, ...location };
+    const result = await this._locationsQB.update(id, merged);
+    if (!result.affected) {
       throw new HttpException(
         `There was an error updating the location`,
         HttpStatus.EXPECTATION_FAILED
       );
+    }
     return this.getById(id);
   }
 
   async delete(id: string): Promise<void> {
     const result = await this._locationsQB.delete(id);
-    if (!result.affected)
+    if (!result.affected) {
       throw new HttpException(
         `There was an error deleting the location`,
         HttpStatus.EXPECTATION_FAILED
       );
-    return null;
+    }
   }
 }

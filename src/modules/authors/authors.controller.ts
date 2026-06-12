@@ -6,33 +6,38 @@ import { Body, Controller, Delete, Get, Param, Patch, Post, Put } from '@nestjs/
 export class AuthorsController {
   constructor(private readonly _authorsService: AuthorsService) {}
 
-  @Get(``)
+  @Get('')
   public getList() {
     return this._authorsService.getList();
   }
 
-  @Get(`/:id`)
-  public getById(@Param(`id`) id: string) {
+  @Get('/:id')
+  public getById(@Param('id') id: string) {
     return this._authorsService.getById(id, true);
   }
 
-  @Post(``)
+  @Post('')
   public create(@Body() author: Author) {
     return this._authorsService.create(author);
   }
 
-  @Put(`/:id`)
-  public update(@Param(`id`) id: string, @Body() author: Partial<Author>) {
+  @Put('/:id')
+  public update(@Param('id') id: string, @Body() author: Partial<Author>) {
     return this._authorsService.update(id, author);
   }
 
-  @Patch(`/:id/activate`)
-  public activate(@Param(`id`) id: string) {
-    this._authorsService.changeActive(id, true);
+  @Patch('/:id/activate')
+  public activate(@Param('id') id: string) {
+    return this._authorsService.changeActive(id, true); // ← añadido return
   }
 
-  @Patch(`/:id/deactivate`)
-  public deactivate(@Param(`id`) id: string) {
-    this._authorsService.changeActive(id, false);
+  @Patch('/:id/deactivate')
+  public deactivate(@Param('id') id: string) {
+    return this._authorsService.changeActive(id, false); // ← añadido return
+  }
+
+  @Delete('/:id')
+  public delete(@Param('id') id: string) {
+    return this._authorsService.delete(id);
   }
 }

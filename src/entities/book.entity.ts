@@ -72,7 +72,7 @@ export class Book {
   buyDate?: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
-  ownerId: number;
+  ownerId: string;
 
   @Column(`varchar`, { length: 50, nullable: true })
   borrowed?: string;
@@ -95,7 +95,7 @@ export class Book {
     originalLanguage: string,
     publicationDate: string,
     serie: Serie,
-    ownerId: number,
+    ownerId: string,
     editorial: Editorial,
     active: boolean,
     id?: string,
