@@ -1,4 +1,4 @@
-import { ENTITIES } from '@config/entity-tagging.constant';
+import { ENTITY } from '@config/entity-tagging.constant';
 import { Author } from '@entities/author.entity';
 import { Editorial } from '@entities/editorial.entity';
 import { Genre } from '@entities/genre.entity';
@@ -13,7 +13,7 @@ import {
   PrimaryGeneratedColumn
 } from 'typeorm';
 
-@Entity({ name: ENTITIES.BOOK })
+@Entity({ name: ENTITY.BOOK })
 export class Book {
   @PrimaryGeneratedColumn('uuid')
   id: string;

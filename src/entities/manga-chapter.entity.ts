@@ -1,8 +1,8 @@
-import { ENTITIES } from '@config/entity-tagging.constant';
+import { ENTITY } from '@config/entity-tagging.constant';
 import { Manga } from '@entities/manga.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: ENTITIES.MANGA_CHAPTERS })
+@Entity({ name: ENTITY.MANGA_CHAPTERS })
 export class MangaChapter {
   @PrimaryGeneratedColumn('uuid')
   id: string;
