@@ -24,8 +24,8 @@ export class Book {
   @ManyToMany(() => Author, (author) => author.books, { cascade: true })
   @JoinTable({
     name: `author_books`,
-    joinColumn: { name: `authorId`, referencedColumnName: `id` },
-    inverseJoinColumn: { name: `bookId`, referencedColumnName: `id` }
+    joinColumn: { name: `bookId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `authorId`, referencedColumnName: `id` },
   })
   authors: Author[];
 

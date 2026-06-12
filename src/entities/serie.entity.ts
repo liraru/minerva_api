@@ -15,7 +15,7 @@ export class Serie {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column(`varchar`, { length: 50, nullable: false })
+  @Column(`varchar`, { length: 150, nullable: false })
   name: string;
 
   @Column(`varchar`, { length: 255, nullable: true })
@@ -36,8 +36,8 @@ export class Serie {
   @ManyToMany(() => Author, (author) => author.series, { cascade: true })
   @JoinTable({
     name: `author_series`,
-    joinColumn: { name: `authorId`, referencedColumnName: `id` },
-    inverseJoinColumn: { name: `serieId`, referencedColumnName: `id` }
+    joinColumn: { name: `serieId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `authorId`, referencedColumnName: `id` },
   })
   authors: Author[];
 

@@ -23,7 +23,7 @@ export class Manga {
   @Column(`varchar`, { length: 150, nullable: false })
   title: string;
 
-  @Column(`varchar`, { length: 255, nullable: true })
+  @Column(`varchar`, { length: 512, nullable: true })
   synopsis?: string;
 
   @Column(`varchar`, { length: 20, nullable: false, default: MANGA_STATUS.ONGOING })
@@ -32,8 +32,8 @@ export class Manga {
   @ManyToMany(() => Author, (author) => author.mangas, { cascade: true })
   @JoinTable({
     name: `author_manga`,
-    joinColumn: { name: `authorId`, referencedColumnName: `id` },
-    inverseJoinColumn: { name: `mangaId`, referencedColumnName: `id` }
+    joinColumn: { name: `mangaId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `authorId`, referencedColumnName: `id` }
   })
   authors: Author[];
 

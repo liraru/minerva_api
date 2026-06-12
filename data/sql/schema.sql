@@ -23,15 +23,24 @@ DROP TABLE IF EXISTS `author_books`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_books` (
-  `authorId` varchar(36) NOT NULL,
   `bookId` varchar(36) NOT NULL,
-  PRIMARY KEY (`authorId`,`bookId`),
-  KEY `IDX_43d2c30a3b587ac731a91bef06` (`authorId`),
+  `authorId` varchar(36) NOT NULL,
+  PRIMARY KEY (`bookId`,`authorId`),
   KEY `IDX_2c8b381c6ecaa4aa10d6830899` (`bookId`),
-  CONSTRAINT `FK_2c8b381c6ecaa4aa10d6830899a` FOREIGN KEY (`bookId`) REFERENCES `authors` (`id`),
-  CONSTRAINT `FK_43d2c30a3b587ac731a91bef06f` FOREIGN KEY (`authorId`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `IDX_43d2c30a3b587ac731a91bef06` (`authorId`),
+  CONSTRAINT `FK_2c8b381c6ecaa4aa10d6830899a` FOREIGN KEY (`bookId`) REFERENCES `books` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_43d2c30a3b587ac731a91bef06f` FOREIGN KEY (`authorId`) REFERENCES `authors` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `author_books`
+--
+
+LOCK TABLES `author_books` WRITE;
+/*!40000 ALTER TABLE `author_books` DISABLE KEYS */;
+/*!40000 ALTER TABLE `author_books` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `author_manga`
@@ -41,15 +50,24 @@ DROP TABLE IF EXISTS `author_manga`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_manga` (
-  `authorId` varchar(36) NOT NULL,
   `mangaId` varchar(36) NOT NULL,
-  PRIMARY KEY (`authorId`,`mangaId`),
-  KEY `IDX_d495be0b02c85e4a5bb0dfacd9` (`authorId`),
+  `authorId` varchar(36) NOT NULL,
+  PRIMARY KEY (`mangaId`,`authorId`),
   KEY `IDX_53561ef59d3c25188ba14a8e36` (`mangaId`),
-  CONSTRAINT `FK_53561ef59d3c25188ba14a8e36b` FOREIGN KEY (`mangaId`) REFERENCES `authors` (`id`),
-  CONSTRAINT `FK_d495be0b02c85e4a5bb0dfacd94` FOREIGN KEY (`authorId`) REFERENCES `mangas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  KEY `IDX_d495be0b02c85e4a5bb0dfacd9` (`authorId`),
+  CONSTRAINT `FK_53561ef59d3c25188ba14a8e36b` FOREIGN KEY (`mangaId`) REFERENCES `mangas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_d495be0b02c85e4a5bb0dfacd94` FOREIGN KEY (`authorId`) REFERENCES `authors` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `author_manga`
+--
+
+LOCK TABLES `author_manga` WRITE;
+/*!40000 ALTER TABLE `author_manga` DISABLE KEYS */;
+/*!40000 ALTER TABLE `author_manga` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `author_series`
@@ -59,15 +77,24 @@ DROP TABLE IF EXISTS `author_series`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_series` (
-  `authorId` varchar(36) NOT NULL,
   `serieId` varchar(36) NOT NULL,
-  PRIMARY KEY (`authorId`,`serieId`),
-  KEY `IDX_475ff3643bc2dfaf79dd6f1a4a` (`authorId`),
+  `authorId` varchar(36) NOT NULL,
+  PRIMARY KEY (`serieId`,`authorId`),
   KEY `IDX_caed9f24b578df637164c9754a` (`serieId`),
-  CONSTRAINT `FK_475ff3643bc2dfaf79dd6f1a4a8` FOREIGN KEY (`authorId`) REFERENCES `series` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FK_caed9f24b578df637164c9754a4` FOREIGN KEY (`serieId`) REFERENCES `authors` (`id`)
+  KEY `IDX_475ff3643bc2dfaf79dd6f1a4a` (`authorId`),
+  CONSTRAINT `FK_475ff3643bc2dfaf79dd6f1a4a8` FOREIGN KEY (`authorId`) REFERENCES `authors` (`id`),
+  CONSTRAINT `FK_caed9f24b578df637164c9754a4` FOREIGN KEY (`serieId`) REFERENCES `series` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `author_series`
+--
+
+LOCK TABLES `author_series` WRITE;
+/*!40000 ALTER TABLE `author_series` DISABLE KEYS */;
+/*!40000 ALTER TABLE `author_series` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `authors`
@@ -80,7 +107,7 @@ CREATE TABLE `authors` (
   `id` varchar(36) NOT NULL,
   `name` varchar(50) NOT NULL,
   `lastname` varchar(50) DEFAULT NULL,
-  `biography` varchar(255) DEFAULT NULL,
+  `biography` varchar(512) DEFAULT NULL,
   `birthdate` varchar(10) DEFAULT NULL,
   `deceasedDate` varchar(10) DEFAULT NULL,
   `active` tinyint NOT NULL DEFAULT '1',
@@ -88,6 +115,15 @@ CREATE TABLE `authors` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `authors`
+--
+
+LOCK TABLES `authors` WRITE;
+/*!40000 ALTER TABLE `authors` DISABLE KEYS */;
+/*!40000 ALTER TABLE `authors` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `books`
@@ -130,6 +166,15 @@ CREATE TABLE `books` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `books`
+--
+
+LOCK TABLES `books` WRITE;
+/*!40000 ALTER TABLE `books` DISABLE KEYS */;
+/*!40000 ALTER TABLE `books` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `editorials`
 --
 
@@ -144,6 +189,15 @@ CREATE TABLE `editorials` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `editorials`
+--
+
+LOCK TABLES `editorials` WRITE;
+/*!40000 ALTER TABLE `editorials` DISABLE KEYS */;
+/*!40000 ALTER TABLE `editorials` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `genres`
 --
 
@@ -156,6 +210,15 @@ CREATE TABLE `genres` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `genres`
+--
+
+LOCK TABLES `genres` WRITE;
+/*!40000 ALTER TABLE `genres` DISABLE KEYS */;
+/*!40000 ALTER TABLE `genres` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `locations`
@@ -175,6 +238,15 @@ CREATE TABLE `locations` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `locations`
+--
+
+LOCK TABLES `locations` WRITE;
+/*!40000 ALTER TABLE `locations` DISABLE KEYS */;
+/*!40000 ALTER TABLE `locations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `manga_chapters`
 --
 
@@ -192,6 +264,15 @@ CREATE TABLE `manga_chapters` (
   CONSTRAINT `FK_18f6909ae9e0e6cf204c10cee25` FOREIGN KEY (`mangaId`) REFERENCES `mangas` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `manga_chapters`
+--
+
+LOCK TABLES `manga_chapters` WRITE;
+/*!40000 ALTER TABLE `manga_chapters` DISABLE KEYS */;
+/*!40000 ALTER TABLE `manga_chapters` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `mangas`
@@ -226,6 +307,15 @@ CREATE TABLE `mangas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `mangas`
+--
+
+LOCK TABLES `mangas` WRITE;
+/*!40000 ALTER TABLE `mangas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mangas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `series`
 --
 
@@ -242,6 +332,15 @@ CREATE TABLE `series` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `series`
+--
+
+LOCK TABLES `series` WRITE;
+/*!40000 ALTER TABLE `series` DISABLE KEYS */;
+/*!40000 ALTER TABLE `series` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -252,4 +351,4 @@ CREATE TABLE `series` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-06-12 11:39:17
+-- Dump completed on 2026-06-12 16:43:28

@@ -15,7 +15,7 @@ export class Author {
   @Column(`varchar`, { length: 50, nullable: true })
   lastname?: string;
 
-  @Column(`varchar`, { length: 255, nullable: true })
+  @Column(`varchar`, { length: 512, nullable: true })
   biography?: string;
 
   @Column(`varchar`, { length: 10, nullable: true })
