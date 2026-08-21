@@ -1,6 +1,6 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Book } from 'src/entities/book.entity';
-import { Manga } from 'src/entities/manga.entity';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Book } from '@entities/book.entity';
+import { Manga } from '@entities/manga.entity';
 import {
   Column,
   Entity,
@@ -15,7 +15,13 @@ export class Location {
   id: string;
 
   @Column(`varchar`, { length: 50, nullable: false })
-  name: string;
+  address: string;
+
+  @Column(`varchar`, { length: 50, nullable: false })
+  room: string;
+
+  @Column(`varchar`, { length: 50, nullable: false })
+  shelf: string;
 
   @Column(`varchar`, { length: 250, nullable: true })
   observations: string;
@@ -27,14 +33,18 @@ export class Location {
   mangas?: Manga[];
 
   constructor(
-    name: string,
-    observations: string,
+    address: string,
+    room: string,
+    shelf: string,
     id?: string,
+    observations?: string,
     books?: Book[],
     mangas?: Manga[]
   ) {
     this.id = id;
-    this.name = name;
+    this.room = room;
+    this.shelf = shelf;
+    this.address = address;
     this.observations = observations;
     this.books = books;
     this.mangas = mangas;

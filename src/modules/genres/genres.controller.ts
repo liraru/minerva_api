@@ -1,6 +1,6 @@
+import { Genre } from '@entities/index';
+import { GenresService } from '@modules/genres';
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
-import { GenresService } from '@modules/genres/services/genres.service';
-import { Genre } from '@entities/genre.entity';
 
 @Controller('genres')
 export class GenresController {
@@ -17,8 +17,8 @@ export class GenresController {
   }
 
   @Post(``)
-  public create(@Body() genre: Partial<Genre>) {
-    return this._genresService.create(genre.name);
+  public create(@Body() genre: Genre) {
+    return this._genresService.create(genre);
   }
 
   @Put(`/:id`)

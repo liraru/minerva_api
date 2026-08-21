@@ -1,7 +1,6 @@
-import { Genre } from '@entities/genre.entity';
-import { GenresQueryBuilderService } from '@modules/genres/services/genres-query-builder/genres-query-builder.service';
+import { Genre } from '@entities/index';
+import { GenresQueryBuilderService } from '@modules/genres/services/genres-query-builder.service';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class GenresService {
@@ -19,8 +18,8 @@ export class GenresService {
     return items[0];
   }
 
-  async create(name: string): Promise<Genre> {
-    const result = await this._genresQB.create(name);
+  async create(genre: Genre): Promise<Genre> {
+    const result = await this._genresQB.create(genre);
     if (!result)
       throw new HttpException(
         `There was an error creating the genre`,

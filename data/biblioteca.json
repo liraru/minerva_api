@@ -1,0 +1,4585 @@
+{
+  "novela": [
+    {
+      "Título": "El Testamento Maya",
+      "Autor": "Alten, Steve",
+      "Serie": "El Testamento Maya",
+      "Vol.": 1.0,
+      "Editorial": "Grijalbo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Resurrección Maya",
+      "Autor": "Alten, Steve",
+      "Serie": "El Testamento Maya",
+      "Vol.": 2.0,
+      "Editorial": "Grijalbo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Assassin's Creed",
+      "Autor": "Bowden, Oliver",
+      "Serie": "Assassin's Creed",
+      "Vol.": null,
+      "Editorial": "La Esfera de los Libros",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Ángeles y demonios",
+      "Autor": "Brown, Dan",
+      "Serie": "Robert Langdon",
+      "Vol.": 1.0,
+      "Editorial": "Umbriel",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Código DaVinci",
+      "Autor": "Brown, Dan",
+      "Serie": "Robert Langdon",
+      "Vol.": 2.0,
+      "Editorial": "Umbriel",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Símbolo Perdido",
+      "Autor": "Brown, Dan",
+      "Serie": "Robert Langdon",
+      "Vol.": 3.0,
+      "Editorial": "Booket",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Inferno",
+      "Autor": "Brown, Dan",
+      "Serie": "Robert Langdon",
+      "Vol.": 4.0,
+      "Editorial": "Planeta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Origen",
+      "Autor": "Brown, Dan",
+      "Serie": "Robert Langdon",
+      "Vol.": 5.0,
+      "Editorial": "Planeta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Conspiración",
+      "Autor": "Brown, Dan",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Umbriel",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Fortaleza Digital",
+      "Autor": "Brown, Dan",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Umbriel",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Alicia en el País de las Maravillas y a Través del Espejo",
+      "Autor": "Carrol, Lewis",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Alianza Editorial",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Juegos del Hambre",
+      "Autor": "Collins, Suzanne",
+      "Serie": "Los Juegos del Hambre",
+      "Vol.": 1.0,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "En Llamas",
+      "Autor": "Collins, Suzanne",
+      "Serie": "Los Juegos del Hambre",
+      "Vol.": 2.0,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sinsajo",
+      "Autor": "Collins, Suzanne",
+      "Serie": "Los Juegos del Hambre",
+      "Vol.": 3.0,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sherlock Holmes: Estudio en Escarlata",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sherlock Holmes: Novelas",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sherlock Holmes: Relatos 1",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sherlock Holmes: Relatos 2",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Sherlock Holmes Complete Collection",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "Vintage Classics",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Case Files of Sherlock Holmes",
+      "Autor": null,
+      "Serie": "Sherlock Holmes",
+      "Vol.": null,
+      "Editorial": "Andre Deutsch",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "La Biblioteca de los Muertos",
+      "Autor": "Cooper, Glenn",
+      "Serie": "La Biblioteca de los Muertos",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Fin de los Escribas",
+      "Autor": "Cooper, Glenn",
+      "Serie": "La Biblioteca de los Muertos",
+      "Vol.": 3.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Violinista de Praga",
+      "Autor": "Crane, Michael",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Hombre en el Castillo",
+      "Autor": "Dick, Phillip K.",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Booket",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Grandes Esperanzas",
+      "Autor": "Dickens, Charles",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Papeles Póstumos del Club Pitwick",
+      "Autor": "Dickens, Charles",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Nuestro Amigo Común",
+      "Autor": "Dickens, Charles",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Oliver Twist",
+      "Autor": "Dickens, Charles",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Catedral del Mar",
+      "Autor": "Falcones, Ildefonso",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Grijalbo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Mano de Fátima",
+      "Autor": "Falcones, Ildefonso",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Pilares de la Tierra",
+      "Autor": "Follet, Ken",
+      "Serie": "Los Pilares de la Tierra",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Canto del Cuco",
+      "Autor": "Galbraith, Robert",
+      "Serie": "Cormoran Strike",
+      "Vol.": 1.0,
+      "Editorial": "Booket",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Alas de Fuego",
+      "Autor": "Gallego, Laura",
+      "Serie": "Ahriel",
+      "Vol.": 1.0,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Alas Negras",
+      "Autor": "Gallego, Laura",
+      "Serie": "Ahriel",
+      "Vol.": 2.0,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Resistencia",
+      "Autor": "Gallego, Laura",
+      "Serie": "Memorias de Idhún",
+      "Vol.": 1.0,
+      "Editorial": "SM",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Tríada",
+      "Autor": "Gallego, Laura",
+      "Serie": "Memorias de Idhún",
+      "Vol.": 2.0,
+      "Editorial": "SM",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Panteón",
+      "Autor": "Gallego, Laura",
+      "Serie": "Memorias de Idhún",
+      "Vol.": 3.0,
+      "Editorial": "SM",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "How to Stop Time",
+      "Autor": "Haig, Matt",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Canongate",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "El Laberinto de la Rosa",
+      "Autor": "Hardie, Titania",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Suma",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Castillo Ambulante",
+      "Autor": "Jones Wynne, Diana",
+      "Serie": "Howl",
+      "Vol.": 1.0,
+      "Editorial": "Berenice",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Sol bajo la Seda",
+      "Autor": "Marchal, Eric",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Child in Time",
+      "Autor": "McEwan, Ian",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Vintage",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "El Ocho",
+      "Autor": "Neville, Katherine",
+      "Serie": "Catherine Velis",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Fuego",
+      "Autor": "Neville, Katherine",
+      "Serie": "Catherine Velis",
+      "Vol.": 2.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Luces del Norte",
+      "Autor": "Pullman, Phillip",
+      "Serie": "La Materia Oscura",
+      "Vol.": 1.0,
+      "Editorial": "Editorial B",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Daga",
+      "Autor": "Pullman, Phillip",
+      "Serie": "La Materia Oscura",
+      "Vol.": 2.0,
+      "Editorial": "Editorial B",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Catalejo Lacado",
+      "Autor": "Pullman, Phillip",
+      "Serie": "La Materia Oscura",
+      "Vol.": 3.0,
+      "Editorial": "Editorial B",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Nombre del Viento",
+      "Autor": "Rothfuss, Patrick",
+      "Serie": "La Crónica del Asesino de Reyes",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Temor de un Hombre Sabio",
+      "Autor": "Rothfuss, Patrick",
+      "Serie": "La Crónica del Asesino de Reyes",
+      "Vol.": 2.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Música del Silencio",
+      "Autor": "Rothfuss, Patrick",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter and the Philosopher's Stone",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 1.0,
+      "Editorial": "Bloomsbury",
+      "Idioma": "en",
+      "Notas": "Ed. Especial Ravenclaw"
+    },
+    {
+      "Título": "Harry Potter y La Piedra Filosofal",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 1.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y la Cámara de los Secretos",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 2.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y el Prisionero de Azkaban",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 3.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y el Cáliz de Fuego",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 4.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y la Órden del Fénix",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 5.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y el Misterio del Príncipe",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 6.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y las Reliquias de la Muerte",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 7.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Sombra del Viento",
+      "Autor": "Ruíz Zafón, Carlos",
+      "Serie": "El Cementerio de los Libros Olvidados",
+      "Vol.": 1.0,
+      "Editorial": "Planeta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Juego del Ángel",
+      "Autor": "Ruíz Zafón, Carlos",
+      "Serie": "El Cementerio de los Libros Olvidados",
+      "Vol.": 2.0,
+      "Editorial": "Planeta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Frankenstein",
+      "Autor": "Shelley, Mary",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Anaya",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Isla del Tesoro",
+      "Autor": "Stevenson, Robert Louis",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin Clásicos",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y el Legado Maldito",
+      "Autor": "Tiffany, John; Thorne, Jack",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Comunidad del Anillo",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "El Señor de los Anillos",
+      "Vol.": 1.0,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Las Dos Torres",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "El Señor de los Anillos",
+      "Vol.": 2.0,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Retorno del Rey",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "El Señor de los Anillos",
+      "Vol.": 3.0,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cuentos Inconclusos de Númenor y la Tierra Media",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "O Hobbit",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Xerais",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Silmarillion",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Mujer de las Nueve Lunas",
+      "Autor": "Torres Ripa, Carmen",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Camino de las Sombras",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Ángel de la Noche",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Al Filo de las Sombras",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Ángel de la Noche",
+      "Vol.": 2.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Más allá de las Sombras",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Ángel de la Noche",
+      "Vol.": 3.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Sal de la Tierra",
+      "Autor": "Wolf, Daniel",
+      "Serie": "Saga de la familia Fleury",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Luz de la Tierra",
+      "Autor": "Wolf, Daniel",
+      "Serie": "Saga de la familia Fleury",
+      "Vol.": 2.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Oro del Mar",
+      "Autor": "Wolf, Daniel",
+      "Serie": "Saga de la familia Fleury",
+      "Vol.": 3.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Plaga del Cielo",
+      "Autor": "Wolf, Daniel",
+      "Serie": "Saga de la familia Fleury",
+      "Vol.": 4.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Wit and Wisdom of Sherlock Holmes",
+      "Autor": null,
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Prion",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sabikui Bisco vol. 1",
+      "Autor": "Shinji Cobkubo",
+      "Serie": "Sabikui Bisco",
+      "Vol.": 1.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Sabikui Bisco vol. 2: Blood Pressure! Super Monk Kelshinha",
+      "Autor": "Shinji Cobkubo",
+      "Serie": "Sabikui Bisco",
+      "Vol.": 2.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Sabikui Bisco vol. 3: Urban Life-style \"Tokyo\"",
+      "Autor": "Shinji Cobkubo",
+      "Serie": "Sabikui Bisco",
+      "Vol.": 3.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Rimas y Leyendas",
+      "Autor": "Becquer, Gustavo Adolfo",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Convenience Store Woman",
+      "Autor": "Sayaka Murata",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Granta",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ready Player One",
+      "Autor": "Ernest Cline",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Anagrama",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Noche y su Luna",
+      "Autor": "Piper C.J.",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Alfaguara",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Herederos de la Tierra",
+      "Autor": "Falcones, Ildefonso",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Hielo y Plata",
+      "Autor": "Alena Pons",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Blackie Books",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Os Dóus de Sempre",
+      "Autor": "Alfonso R. Castelao",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Galaxia",
+      "Idioma": "gal",
+      "Notas": null
+    },
+    {
+      "Título": "A Nosa Cinza",
+      "Autor": "Xavier Alcalá",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Galaxia",
+      "Idioma": "gal",
+      "Notas": null
+    },
+    {
+      "Título": "No. 6",
+      "Autor": "Atsuko Asano",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 1",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 2",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 3",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 4",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 5",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 6",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 6.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 7",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 7.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heaven Official Blessing (Tian Guan Ci Fu) vol. 8",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Heaven Official Blessing (Tian Guan Ci Fu)",
+      "Vol.": 8.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi) vol. 1",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi) vol. 2",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi) vol. 3",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi) vol. 4",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi) vol. 5",
+      "Autor": "Mo Xiang Tong Xiu",
+      "Serie": "Grandmaster of Demonic Cultivation (Mo Dao Zu Shi)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 1",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 2",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 3",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 4",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 5",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 6",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 6.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Remnants of Filth (YUWU) vol. 7",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "Remnants of Filth (YUWU)",
+      "Vol.": 7.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Japón con Jamón",
+      "Autor": "Nekojitablog",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Minna no Nihongo",
+      "Autor": "3A Corporation",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "3A Network",
+      "Idioma": "jp",
+      "Notas": null
+    },
+    {
+      "Título": "KOI: Manual Básico de Japonés",
+      "Autor": "Yoko Nakazawa",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sugoi: Japonés para Viajeros",
+      "Autor": "Takeshi Hirano",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Lo Mejor de Japón",
+      "Autor": "VVAA",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Lonely Planet",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cuentos",
+      "Autor": "Edgar Allan Poe",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Tienda de Antigüedades",
+      "Autor": "Charles Dickens",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Blackie Books",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Crimen y Castigo",
+      "Autor": "Fiódor Dostoievski",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Relatos",
+      "Autor": "Edgar Allan Poe",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Escarabajo de Oro",
+      "Autor": "Edgar Allan Poe",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Anaya",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Principito",
+      "Autor": "Antonine de Saint-Exupéry",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": 1984,
+      "Autor": "George Orwell",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Don Quijote de la Mancha",
+      "Autor": "Miguel de Cervantes",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Santillana",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Viaje al Centro de la Tierra",
+      "Autor": "Julio Verne",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "De la Tierra a la Luna",
+      "Autor": "Julio Verne",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Vuelta al Mundo en Ochenta Días",
+      "Autor": "Julio Verne",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Viejo y el Mar",
+      "Autor": "Ernest Hemingway",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "A Christmas Carol",
+      "Autor": "Charles Dickens",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "La Luz que no Puedes Ver",
+      "Autor": "Anthony Doerr",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Prisma Negro",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Portador de la Luz",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Daga de la Ceguera",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Portador de la Luz",
+      "Vol.": 2.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Ojo Fragmentado",
+      "Autor": "Weeks, Brent",
+      "Serie": "El Portador de la Luz",
+      "Vol.": 3.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Forjada en la Tormenta",
+      "Autor": "David B. Gil",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Ocho Millones de Dioses",
+      "Autor": "David B. Gil",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Guerrero a la Sombra del Cerezo",
+      "Autor": "David B. Gil",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Your name",
+      "Autor": "Makoto Shinkai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Planeta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Libro de la Oscuridad",
+      "Autor": "Pullman, Phillip",
+      "Serie": "La Bella Salvaje",
+      "Vol.": 1.0,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Beyond the Wand",
+      "Autor": "Tom Felton",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Penguin",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Mi Vecino Miyazaki",
+      "Autor": "Álvaro Lopez; Marta García",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Diábolo Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 1",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 2",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 3",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 4",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 5",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 6",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 6.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 7",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 7.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 8",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 8.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 9",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 9.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 10",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 10.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Husky and his White Cat Shizun vol. 11",
+      "Autor": "Rou Bao Bu Chi Rou",
+      "Serie": "The Husky and his White Cat Shizun (Erha he ta de bai mao Shizun)",
+      "Vol.": 11.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Genshin Impact Artbook: Mondstadt and Liyue",
+      "Autor": "miHoYo / HoYoverse",
+      "Serie": "Genshin Impact Artbook",
+      "Vol.": 1.0,
+      "Editorial": "Tianwen Kadokawa",
+      "Idioma": "cn",
+      "Notas": null
+    },
+    {
+      "Título": "Genshin Impact Artbook: Inazuma",
+      "Autor": "miHoYo / HoYoverse",
+      "Serie": "Genshin Impact Artbook",
+      "Vol.": 2.0,
+      "Editorial": "Tianwen Kadokawa",
+      "Idioma": "cn",
+      "Notas": null
+    },
+    {
+      "Título": "Genshin Impact Artbook: Sumeru",
+      "Autor": "miHoYo / HoYoverse",
+      "Serie": "Genshin Impact Artbook",
+      "Vol.": 3.0,
+      "Editorial": "Tianwen Kadokawa",
+      "Idioma": "cn",
+      "Notas": null
+    },
+    {
+      "Título": "Thousand Autumns vol. 1",
+      "Autor": "Meng Xi Shi",
+      "Serie": "Thousand Autumns (Qian Qiu)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Thousand Autumns vol. 2",
+      "Autor": "Meng Xi Shi",
+      "Serie": "Thousand Autumns (Qian Qiu)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Thousand Autumns vol. 3",
+      "Autor": "Meng Xi Shi",
+      "Serie": "Thousand Autumns (Qian Qiu)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Thousand Autumns vol. 4",
+      "Autor": "Meng Xi Shi",
+      "Serie": "Thousand Autumns (Qian Qiu)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Thousand Autumns vol. 5",
+      "Autor": "Meng Xi Shi",
+      "Serie": "Thousand Autumns (Qian Qiu)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Guardian vol. 1",
+      "Autor": "priest",
+      "Serie": "Guardian (Zhen Hun)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Guardian vol. 2",
+      "Autor": "priest",
+      "Serie": "Guardian (Zhen Hun)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Guardian vol. 3",
+      "Autor": "priest",
+      "Serie": "Guardian (Zhen Hun)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 1",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 1.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 2",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 2.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 3",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 3.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 4",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 4.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 5",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 5.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 6",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 6.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Ballad of Sword and Wine vol. 7",
+      "Autor": "Tang Jiu Qing",
+      "Serie": "Ballad of Sword and Wine (Qiang Jin Jiu)",
+      "Vol.": 7.0,
+      "Editorial": "Seven Seas",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Osamu Dazai's Entrance Exam",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 1.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Osamu Dazai and the Dark Era",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 2.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Untold Origins of the Detective Agency",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 3.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "55 minutes",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 4.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Dead Apple",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 5.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Beast",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 6.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Dazai, Chuuya, Age Fifteen",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 7.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Stormbringer",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 8.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Day I took in Dazai",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": 9.0,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Bungo Stray Dogs: Novel Version",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": null,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Another Story",
+      "Autor": "Kafka Asagiri",
+      "Serie": "Bungo Stray Dogs: Light novels",
+      "Vol.": null,
+      "Editorial": "Yen ON",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Heike Monogatari",
+      "Autor": null,
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Dragón, Rashomon y otros cuentos",
+      "Autor": "Akutagawa Ryunosuke",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Kokoro",
+      "Autor": "Natsume Soseki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Impedimenta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Señor de los Anillos",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "El Señor de los Anillos",
+      "Vol.": null,
+      "Editorial": "Minotauro",
+      "Idioma": "spa",
+      "Notas": "Ilustrado por el autor"
+    },
+    {
+      "Título": "The Fellowship of the Ring",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "The Lord of the Rings",
+      "Vol.": 1.0,
+      "Editorial": "HarperCollins",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Two Towers",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "The Lord of the Rings",
+      "Vol.": 2.0,
+      "Editorial": "HarperCollins",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Return of the King",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "The Lord of the Rings",
+      "Vol.": 3.0,
+      "Editorial": "HarperCollins",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "The Lord of the Rings: A Reader's Companion",
+      "Autor": "Wayne G. Hammond; Christina Scull",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "HarperCollins",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "El Hobbit",
+      "Autor": "Tolkien, John Ronald Reuel",
+      "Serie": "The Lord of the Rings",
+      "Vol.": 0.0,
+      "Editorial": "Booket",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Underground",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "1Q84",
+      "Autor": "Haruki Murakami",
+      "Serie": "1Q85",
+      "Vol.": 1.0,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "1Q85",
+      "Autor": "Haruki Murakami",
+      "Serie": "1Q86",
+      "Vol.": 2.0,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "1Q86",
+      "Autor": "Haruki Murakami",
+      "Serie": "1Q87",
+      "Vol.": 3.0,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Fin del Mundo y un Despiadado País de las Maravillas",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Crónica del Pájaro que Da Cuerda al Mundo",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Tokio Blues. Norwegian Wood",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Después del Terremoto",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Primera Persona del Singular",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Años de Peregrinación del Mundo sin Color",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "After Dark",
+      "Autor": "Haruki Murakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Muerte del Comendador",
+      "Autor": "Haruki Murakami",
+      "Serie": "La Muerte del Comendador",
+      "Vol.": 1.0,
+      "Editorial": "Tusquets Editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Harry Potter y La Piedra Filosofal",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 1.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y la Cámara de los Secretos",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 2.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y el Prisionero de Azkaban",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 3.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y el Cáliz de Fuego",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 4.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y la Órden del Fénix",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 5.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y el Misterio del Príncipe",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 6.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y las Reliquias de la Muerte",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 7.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Ed. Especial Hufflepuff"
+    },
+    {
+      "Título": "Harry Potter y La Piedra Filosofal",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 1.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Minalima"
+    },
+    {
+      "Título": "Harry Potter y la Cámara de los Secretos",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 2.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Minalima"
+    },
+    {
+      "Título": "Harry Potter y el Prisionero de Azkaban",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": 3.0,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": "Minalima"
+    },
+    {
+      "Título": "Los Cuentos de Beedle el Bardo",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Quidditch a Través de los Tiempos",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": null,
+      "Editorial": "Whizz Hard Books",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Animales Fantásticos y Dónde Encontrarlos",
+      "Autor": "Rowling, J. K.",
+      "Serie": "Harry Potter",
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Estudio en Escarlata",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Signo de los Cuatro",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Escándalo en Bohemia",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Estrella de Plata",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Carbunclo Azul",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Problema Final",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Sabueso de los Baskerville",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Casa Vacía",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Enigma de la Mesa de Juego",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Vestido de la Reina",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Pabellón Wisteria",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Valle del Terror",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Piedra de Mazarino",
+      "Autor": "Conan Doyle, Sir Arthur",
+      "Serie": "The Sherlock Holmes Collection",
+      "Vol.": null,
+      "Editorial": "RBA",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Santo del Monte Koya",
+      "Autor": "Izumi Kyoka",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sobre el Dragón del Abismo",
+      "Autor": "Izumi Kyoka",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Futón",
+      "Autor": "Tayama Katai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Gorrión de Java",
+      "Autor": "Natsume Soseki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Daisuke",
+      "Autor": "Natsume Soseki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Impedimenta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Soy un Gato",
+      "Autor": "Natsume Soseki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Impedimenta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Kokoro",
+      "Autor": "Natsume Soseki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Signo de los Tiempos",
+      "Autor": "Oda Sakunosuke",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Sobre la Decadencia",
+      "Autor": "Sakaguchi Ango",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Tormenta de Flores",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Indigno de Ser Humano",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Indigno de Ser Humano",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Al Margen - Sajalín editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Ocho Escenas de Tokio",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Al Margen - Sajalín editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Declive",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Al Margen - Sajalín editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Repudiados",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Al Margen - Sajalín editores",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Caja de Pandora",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Ediciones Sajalín",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cuentos de Cabecera",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Recuerdos",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Felicidad de la Familia",
+      "Autor": "Osamu Dazai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Candaya",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "The Poems of Nakahara Chuuya",
+      "Autor": "Chuuya Nakahara",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Gracewing",
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Abrazado a las Estrellas",
+      "Autor": "Chuuya Nakahara",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Triste y Bello",
+      "Autor": "Chuuya Nakahara",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Rashomon y otros relatos históricos",
+      "Autor": "Akutagawa Ryunosuke",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Tabaco y el Diablo",
+      "Autor": "Akutagawa Ryunosuke",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Vida de un Idiota",
+      "Autor": "Akutagawa Ryunosuke",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Crímenes selectos",
+      "Autor": "Edogawa Ranpo",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Musashino",
+      "Autor": "Kunikida Doppo",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Chidori Books",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Tren Nocturno de la Vía Láctea",
+      "Autor": "Miyazawa Kenji",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Juventud",
+      "Autor": "Mori Ogai",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Vuelo del Ave Fénix",
+      "Autor": "Akiko Yosano",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Elogio de la Sombra",
+      "Autor": "Juniichiro Tanizaki",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Un Día de Nieve",
+      "Autor": "Higuchi Ichiyo",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Crónicas del Gato Viajero",
+      "Autor": "Hiro Arikawa",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Pequeño Estudio de los Recuerdos Perdidos",
+      "Autor": "Sanaka Hiiragi",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Grijalbo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "De Pronto Oigo la Voz del Agua",
+      "Autor": "Hiromi Kawakami",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Alfaguara",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "¿Cómo vives?",
+      "Autor": "Genzaburo Yoshino",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "La Luz del Norte",
+      "Autor": "Hideo Yokohama",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Salamandra",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Si Pudiera Cambiarlos",
+      "Autor": null,
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Un Lugar Desconocido",
+      "Autor": "Seicho Matsumoto",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Castillo de Arena",
+      "Autor": "Seicho Matsumoto",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Antes de que se enfríe el café",
+      "Autor": "Toshikazu Kawaguchi",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El gato que amaba los libros",
+      "Autor": "Sosuke Natsukawa",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los Misterios de la Taberna Kamogawa",
+      "Autor": "Hisashi Kashiwai",
+      "Serie": "Taberna Kamogawa",
+      "Vol.": 1.0,
+      "Editorial": "DeBolsillo",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Mis días en la librería Morisaki",
+      "Autor": "Satoshi Yagisawa",
+      "Serie": "La Librería Morisaki",
+      "Vol.": 1.0,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Una velada en la librería Morisaki",
+      "Autor": "Satoshi Yagisawa",
+      "Serie": "La Librería Morisaki",
+      "Vol.": 2.0,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Los sueños de la primavera",
+      "Autor": "Teru Miyamoto",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Territorio de Luz",
+      "Autor": "Yuko Tsushima",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Impedimenta",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El lenguaje de las flores",
+      "Autor": "Alex Pler",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Folk tales of Japan",
+      "Autor": "Kyota Ko",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "en",
+      "Notas": null
+    },
+    {
+      "Título": "Kokoro",
+      "Autor": "Lafcadio Hearn",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cien aspectos de la luna",
+      "Autor": "Yoshitoshi",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Kanjiru; La magia de los Kanji",
+      "Autor": "Takeshi Hirano",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Shiawase-do",
+      "Autor": "Alex Pler",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Mitos y leyendas de Japón",
+      "Autor": "Frederick Hadland Davis",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cuentos tradicionales de Japón",
+      "Autor": "Richard Gordon Smith",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Kojiki: Crónicas de antiguos hechos de Japón",
+      "Autor": null,
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "Cuentos de un pasado lejano",
+      "Autor": "VVAA",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": "Satori Ediciones",
+      "Idioma": "spa",
+      "Notas": null
+    },
+    {
+      "Título": "El Código del Samurai",
+      "Autor": "Inazo Nitobe",
+      "Serie": null,
+      "Vol.": null,
+      "Editorial": null,
+      "Idioma": "spa",
+      "Notas": null
+    }
+  ],
+  "manga": [
+    {
+      "Manga": "No. 6",
+      "Tomo": "001",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "002",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "003",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "004",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "005",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "006",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "007",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "008",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "No. 6",
+      "Tomo": "009",
+      "Guión": "Atsuko Asano",
+      "Dibujo": "Hinoki Kino",
+      "Editorial": "Ivrea",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "IDOLiSH7 - Re:member",
+      "Tomo": "001",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "Hakusensha",
+      "Idioma": "jp"
+    },
+    {
+      "Manga": "IDOLiSH7 - Re:member",
+      "Tomo": "002",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "Hakusensha",
+      "Idioma": "jp"
+    },
+    {
+      "Manga": "IDOLiSH7 - Re:member",
+      "Tomo": "003",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "Hakusensha",
+      "Idioma": "jp"
+    },
+    {
+      "Manga": "IDOLISH7",
+      "Tomo": "001",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "ECC",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "IDOLISH7",
+      "Tomo": "002",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "ECC",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "IDOLISH7 - TRIGGER",
+      "Tomo": "001",
+      "Guión": "Bunta Tsushimi",
+      "Dibujo": "Arina Tanemura",
+      "Editorial": "ECC",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "SOLANIN integral",
+      "Tomo": "001",
+      "Guión": "Inio Asano",
+      "Dibujo": "Inio Asano",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "001",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "002",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "003",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "004",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "005",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "006",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "007",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "008",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "009",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "010",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "011",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Los Apuntes de Vánitas",
+      "Tomo": "011 Special Edition",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Qualia bajo la Nieve",
+      "Tomo": "001",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Aunque no Pueda Hacer Magia",
+      "Tomo": "001",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño a la Orilla del Mar",
+      "Tomo": "001",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "001",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "002",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "003",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "004",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "005",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Un Extraño en Primavera",
+      "Tomo": "006",
+      "Guión": "Kanna Kii",
+      "Dibujo": "Kanna Kii",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "You Are in the Blue Summer",
+      "Tomo": "001",
+      "Guión": "Nagisa Furuya",
+      "Dibujo": "Nagisa Furuya",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Banana Fish",
+      "Tomo": "001",
+      "Guión": "Akimi Yoshida",
+      "Dibujo": "Akimi Yoshida",
+      "Editorial": "Panini Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "001",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "002",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "003",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "004",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "005",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "006",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "007",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "008",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "009",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "010",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "011",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "012",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "013",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "014",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "015",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "016",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "017",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "018",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "019",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bakuman",
+      "Tomo": "020",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "001",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "002",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "003",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "004",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "005",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "006",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "007",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "008",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "009",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "010",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "011",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "012",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "013",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "014",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "015",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "016",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "017",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "018",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "019",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "020",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "021",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "022",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "023",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "024",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Soul Eater",
+      "Tomo": "025",
+      "Guión": "Atsushi Ohkubo",
+      "Dibujo": "Atsushi Ohkubo",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "001",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "002",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "003",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "004",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Yen Press",
+      "Idioma": "en"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "005",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "006",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "007",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "008",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "009",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Yen Press",
+      "Idioma": "en"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "010",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "011",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "012",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "013",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "014",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "015",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "016",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "017",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "018",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "019",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "020",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "021",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "022",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "023",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Pandora Hearts",
+      "Tomo": "024",
+      "Guión": "Jun Mochizuki",
+      "Dibujo": "Jun Mochizuki",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "001",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "002",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "003",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "004",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "005",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "006",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "007",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "008",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "009",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "010",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "011",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "012",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "013",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "014",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Wind Breaker",
+      "Tomo": "015",
+      "Guión": "Satoru Nii",
+      "Dibujo": "Satoru Nii",
+      "Editorial": "Distrito Manga",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "001",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "002",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "003",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "004",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "005",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "006",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "007",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "008",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "009",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "010",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "Links",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Given",
+      "Tomo": "Illustrations",
+      "Guión": "Natsuki Kizu",
+      "Dibujo": "Natsuki Kizu",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Algo entre Nosotros",
+      "Tomo": "001",
+      "Guión": "Hagi",
+      "Dibujo": "Hagi",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "El Dios y el Mensajero Incapaz de Volar",
+      "Tomo": "001",
+      "Guión": "Hagi",
+      "Dibujo": "Hagi",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Link Click",
+      "Tomo": "001",
+      "Guión": "Li Haoling",
+      "Dibujo": "Li Haoling",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Link Click",
+      "Tomo": "002",
+      "Guión": "Li Haoling",
+      "Dibujo": "Li Haoling",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Link Click",
+      "Tomo": "003",
+      "Guión": "Li Haoling",
+      "Dibujo": "Li Haoling",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Link Click",
+      "Tomo": "004",
+      "Guión": "Li Haoling",
+      "Dibujo": "Li Haoling",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Link Click",
+      "Tomo": "005",
+      "Guión": "Li Haoling",
+      "Dibujo": "Li Haoling",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "001",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "002",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "003",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "004",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "005",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "006",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "007",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "008",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Puedo Oír el Sol",
+      "Tomo": "009",
+      "Guión": "Yuki Fumino",
+      "Dibujo": "Yuki Fumino",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Antiguos Alumnos",
+      "Tomo": "001",
+      "Guión": "Asumiko Nakamura",
+      "Dibujo": "Asumiko Nakamura",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Antiguos Alumnos",
+      "Tomo": "002",
+      "Guión": "Asumiko Nakamura",
+      "Dibujo": "Asumiko Nakamura",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "En la Misma Clase",
+      "Tomo": "001",
+      "Guión": "Asumiko Nakamura",
+      "Dibujo": "Asumiko Nakamura",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "En la Misma Clase",
+      "Tomo": "002",
+      "Guión": "Asumiko Nakamura",
+      "Dibujo": "Asumiko Nakamura",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "En la Misma Clase",
+      "Tomo": "003",
+      "Guión": "Asumiko Nakamura",
+      "Dibujo": "Asumiko Nakamura",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Seven Days",
+      "Tomo": "001",
+      "Guión": "Venio Tachibana",
+      "Dibujo": "Venio Tachibana",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Seven Days",
+      "Tomo": "002",
+      "Guión": "Venio Tachibana",
+      "Dibujo": "Venio Tachibana",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Senpai",
+      "Tomo": "001",
+      "Guión": "Bikke",
+      "Dibujo": "Bikke",
+      "Editorial": "Tomodomo",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Boy Meets Maria",
+      "Tomo": "001",
+      "Guión": "Peyo",
+      "Dibujo": "Peyo",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "001",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "002",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "003",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "004",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "005",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "006",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "007",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "008",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "009",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "010",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "011",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "012",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "013",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "014",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "015",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "016",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "017",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "018",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "019",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "020",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "021",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "022",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "023",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "024",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "025",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "026",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "027",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Noragami",
+      "Tomo": "Historias cortas",
+      "Guión": "Adachitoka",
+      "Dibujo": "Adachitoka",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "001",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "002",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "003",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "004",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "005",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "006",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "007",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "008",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "009",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "010",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "011",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "012",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "013",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "014",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "015",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "016",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "017",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "018",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "019",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "020",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "021",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "022",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "023",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "024",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "025",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "026",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Fullmetal Alchemist",
+      "Tomo": "027",
+      "Guión": "Hiromu Arokawa",
+      "Dibujo": "Hiromu Arokawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Atelier of Witch Hat: Ed. Grimorio",
+      "Tomo": "001",
+      "Guión": "Kamome Shirahama",
+      "Dibujo": "Kamome Shirahama",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Atelier of Witch Hat: Ed. Grimorio",
+      "Tomo": "002",
+      "Guión": "Kamome Shirahama",
+      "Dibujo": "Kamome Shirahama",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Atelier of Witch Hat: Ed. Grimorio",
+      "Tomo": "003",
+      "Guión": "Kamome Shirahama",
+      "Dibujo": "Kamome Shirahama",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "El Arte de Atelier of Witch Hat",
+      "Tomo": "001",
+      "Guión": "Kamome Shirahama",
+      "Dibujo": "Kamome Shirahama",
+      "Editorial": "Milky Way Ediciones",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "001",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "002",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "003",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "004",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "005",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "006",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "007",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "008",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "009",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "010",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "011",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "012",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "013",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "014",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "015",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "016",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "017",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "018",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "019",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "020",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "021",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs",
+      "Tomo": "022",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Bungo Stray Dogs: Another Story",
+      "Tomo": "001",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa; Oyoyo",
+      "Editorial": "Yen Press",
+      "Idioma": "en"
+    },
+    {
+      "Manga": "Bungo Stray Dogs: Raku-gaki Techo",
+      "Tomo": "001",
+      "Guión": "Kafka Asagiri",
+      "Dibujo": "Sango Harukawa",
+      "Editorial": "Kadokawa Shoten",
+      "Idioma": "jp"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "001",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "002",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "003",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "004",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "005",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Death Note: Black Edition",
+      "Tomo": "006",
+      "Guión": "Tsugumi Ohba",
+      "Dibujo": "Takeshi Obata",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Sherlock: Estudio en Rosa",
+      "Tomo": "001",
+      "Guión": "Steven Moffat; Mark Gatiss",
+      "Dibujo": "Jay",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Sherlock: El Banquero Ciego",
+      "Tomo": "002",
+      "Guión": "Steven Moffat; Mark Gatiss",
+      "Dibujo": "Jay",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    },
+    {
+      "Manga": "Sherlock: El Gran Juego",
+      "Tomo": "003",
+      "Guión": "Steven Moffat; Mark Gatiss",
+      "Dibujo": "Jay",
+      "Editorial": "Norma Editorial",
+      "Idioma": "spa"
+    }
+  ],
+  "revistas": [
+    {
+      "Revista": "Cherry",
+      "Publicación": "3/2024",
+      "País": "JPN"
+    }
+  ]
+}

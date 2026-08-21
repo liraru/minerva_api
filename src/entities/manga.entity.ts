@@ -1,3 +1,9 @@
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Author } from '@entities/author.entity';
+import { Editorial } from '@entities/editorial.entity';
+import { Genre } from '@entities/genre.entity';
+import { Location } from '@entities/location.entity';
+import { MangaChapter } from '@entities/manga-chapter.entity';
 import {
   Column,
   Entity,
@@ -5,11 +11,9 @@ import {
   ManyToMany,
   ManyToOne,
   OneToMany,
-  PrimaryColumn,
   PrimaryGeneratedColumn
 } from 'typeorm';
-import { Author, Editorial, Genre, MangaChapter, Location } from '@entities/index';
-import { ENTITIES } from '@config/index';
+import { MANGA_STATUS } from '../constants/manga.constant';
 
 @Entity({ name: ENTITIES.MANGA })
 export class Manga {
@@ -19,11 +23,17 @@ export class Manga {
   @Column(`varchar`, { length: 150, nullable: false })
   title: string;
 
+  @Column(`varchar`, { length: 512, nullable: true })
+  synopsis?: string;
+
+  @Column(`varchar`, { length: 20, nullable: false, default: MANGA_STATUS.ONGOING })
+  status: MANGA_STATUS = MANGA_STATUS.ONGOING;
+
   @ManyToMany(() => Author, (author) => author.mangas, { cascade: true })
   @JoinTable({
     name: `author_manga`,
-    joinColumn: { name: `authorId`, referencedColumnName: `id` },
-    inverseJoinColumn: { name: `mangaId`, referencedColumnName: `id` }
+    joinColumn: { name: `mangaId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `authorId`, referencedColumnName: `id` }
   })
   authors: Author[];
 

@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minerva API — Esquema de Base de Datos</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+
+  :root {
+    --bg: #08080e;
+    --surface: #0f0f1a;
+    --surface2: #13131f;
+    --border: #1c1c2e;
+    --border2: #252540;
+    --c-author:   #7c3aed;
+    --c-book:     #0ea5e9;
+    --c-serie:    #f59e0b;
+    --c-editorial:#10b981;
+    --c-genre:    #ef4444;
+    --c-manga:    #ec4899;
+    --c-chapter:  #a78bfa;
+    --c-location: #34d399;
+    --c-pivot:    #475569;
+    --text:  #dde1ef;
+    --muted: #4a5068;
+    --muted2: #6b7280;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+  }
+
+  /* ─── HEADER ─── */
+  header {
+    padding: 1.25rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    backdrop-filter: blur(8px);
+  }
+  header h1 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+    color: #fff;
+  }
+  header .subtitle {
+    font-size: 0.65rem;
+    color: var(--muted2);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-tabs {
+    margin-left: auto;
+    display: flex;
+    gap: 0.25rem;
+  }
+  .nav-tab {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--border2);
+    background: transparent;
+    color: var(--muted2);
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 0.05em;
+  }
+  .nav-tab:hover { background: var(--border); color: var(--text); }
+  .nav-tab.active { background: var(--border2); color: #fff; border-color: #3a3a5c; }
+
+  /* ─── LEGEND ─── */
+  .legend-bar {
+    padding: 0.6rem 2.5rem;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    font-size: 0.65rem;
+    color: var(--muted2);
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 0.45rem; }
+  .leg-dot { width: 8px; height: 8px; border-radius: 50%; }
+  .leg-line { width: 22px; height: 2px; }
+  .leg-dash { width: 22px; height: 0; border-top: 2px dashed; opacity: 0.8; }
+  .leg-dot2 { width: 22px; height: 0; border-top: 2px dotted; opacity: 0.8; }
+
+  /* ─── PANELS ─── */
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* ═══════════════════════════════════════
+     PANEL 1 — DIAGRAM
+  ═══════════════════════════════════════ */
+  .diagram-wrap {
+    padding: 2.5rem;
+    overflow-x: auto;
+    position: relative;
+  }
+
+  .diagram-stage {
+    position: relative;
+    width: 1200px;
+    height: 1080px;
+  }
+
+  /* SVG connector layer */
+  .connectors {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+
+  /* ─── TABLE CARDS ─── */
+  .tcard {
+    position: absolute;
+    width: 236px;
+    background: var(--surface);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s;
+    z-index: 10;
+  }
+  .tcard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  }
+
+  .thead {
+    padding: 0.65rem 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border2);
+  }
+  .thead-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .thead-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .thead-tag {
+    margin-left: auto;
+    font-size: 0.58rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .tfields { padding: 0.3rem 0 0.4rem; }
+
+  .tfield {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.22rem 0.9rem;
+    font-size: 0.68rem;
+    transition: background 0.1s;
+  }
+  .tfield:hover { background: rgba(255,255,255,0.025); }
+
+  .fbadge {
+    font-size: 0.55rem;
+    padding: 0.08rem 0.3rem;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    width: 26px;
+    text-align: center;
+  }
+  .fbadge.pk  { background: rgba(245,158,11,0.18); color: #f59e0b; }
+  .fbadge.fk  { background: rgba(124,58,237,0.18); color: #a78bfa; }
+  .fbadge.col { background: rgba(71,85,105,0.25);  color: #64748b; }
+  .fbadge.rel { background: rgba(6,182,212,0.12);  color: #22d3ee; font-size:0.52rem; width:auto; padding: 0.08rem 0.28rem; }
+
+  .fname { color: var(--text); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ftype { color: var(--muted); font-size: 0.6rem; flex-shrink: 0; }
+
+  .tdiv { height: 1px; background: var(--border); margin: 0.2rem 0; }
+  .tsec {
+    font-size: 0.58rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.15rem 0.9rem 0.1rem;
+  }
+
+  /* color accent per table */
+  .ca-author   .thead { border-left: 3px solid var(--c-author); }
+  .ca-book     .thead { border-left: 3px solid var(--c-book); }
+  .ca-serie    .thead { border-left: 3px solid var(--c-serie); }
+  .ca-editorial .thead { border-left: 3px solid var(--c-editorial); }
+  .ca-genre    .thead { border-left: 3px solid var(--c-genre); }
+  .ca-manga    .thead { border-left: 3px solid var(--c-manga); }
+  .ca-chapter  .thead { border-left: 3px solid var(--c-chapter); }
+  .ca-location .thead { border-left: 3px solid var(--c-location); }
+  .ca-pivot    .thead { border-left: 3px solid var(--c-pivot); border-style: dashed; }
+
+  .ca-author   .thead-dot { background: var(--c-author); }
+  .ca-book     .thead-dot { background: var(--c-book); }
+  .ca-serie    .thead-dot { background: var(--c-serie); }
+  .ca-editorial .thead-dot { background: var(--c-editorial); }
+  .ca-genre    .thead-dot { background: var(--c-genre); }
+  .ca-manga    .thead-dot { background: var(--c-manga); }
+  .ca-chapter  .thead-dot { background: var(--c-chapter); }
+  .ca-location .thead-dot { background: var(--c-location); }
+  .ca-pivot    .thead-dot { background: var(--c-pivot); }
+
+  /* ═══════════════════════════════════════
+     PANEL 2 — DEFINITIONS
+  ═══════════════════════════════════════ */
+  .defs-wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 4rem;
+  }
+
+  .defs-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.4rem;
+  }
+  .defs-sub {
+    font-size: 0.72rem;
+    color: var(--muted2);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+  }
+
+  .def-section {
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .def-header {
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--border2);
+  }
+  .def-header-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .def-header-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    letter-spacing: 0.03em;
+  }
+  .def-header-entity {
+    font-size: 0.65rem;
+    color: var(--muted2);
+    font-style: italic;
+  }
+  .def-header-desc {
+    margin-left: auto;
+    font-size: 0.68rem;
+    color: var(--muted2);
+    max-width: 320px;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .def-body { padding: 0; }
+
+  .def-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+  }
+  .def-table thead tr {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+  }
+  .def-table thead th {
+    padding: 0.6rem 1.2rem;
+    text-align: left;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted2);
+    font-weight: 700;
+  }
+  .def-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+  .def-table tbody tr:last-child { border-bottom: none; }
+  .def-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .def-table td { padding: 0.55rem 1.2rem; vertical-align: middle; }
+
+  .td-badge {
+    display: inline-block;
+    font-size: 0.58rem;
+    padding: 0.1rem 0.38rem;
+    border-radius: 3px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .td-pk  { background: rgba(245,158,11,0.15); color: #f59e0b; }
+  .td-fk  { background: rgba(167,139,250,0.15); color: #a78bfa; }
+  .td-col { background: rgba(71,85,105,0.2); color: #64748b; }
+  .td-rel { background: rgba(34,211,238,0.1); color: #22d3ee; }
+
+  .td-name { color: #fff; font-weight: 400; }
+  .td-type { color: #7c85a2; font-family: 'Space Mono', monospace; }
+  .td-null { color: var(--muted); font-size: 0.62rem; }
+  .td-desc { color: var(--muted2); line-height: 1.5; }
+
+  .null-yes { color: #64748b; }
+  .null-no  { color: #ef4444; font-weight: 700; }
+
+  .rel-chip {
+    display: inline-block;
+    font-size: 0.58rem;
+    padding: 0.1rem 0.38rem;
+    border-radius: 3px;
+    background: rgba(34,211,238,0.1);
+    color: #22d3ee;
+    margin-right: 0.3rem;
+    font-weight: 700;
+  }
+
+  .def-rels {
+    padding: 0.9rem 1.5rem;
+    background: var(--surface2);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .def-rels-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin-right: 0.5rem;
+  }
+  .rel-pill {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    border: 1px solid var(--border2);
+    color: var(--muted2);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .rel-pill .rtype { font-weight: 700; }
+  .rtype-mm { color: #22d3ee; }
+  .rtype-m1 { color: #a78bfa; }
+  .rtype-1m { color: #f59e0b; }
+
+  /* pivot section */
+  .pivot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1.5rem 2.5rem 2.5rem;
+  }
+  .pivot-card {
+    border: 1px dashed var(--border2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface2);
+  }
+  .pivot-header {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px dashed var(--border2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .pivot-header-name {
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    letter-spacing: 0.04em;
+  }
+  .pivot-tag {
+    margin-left: auto;
+    font-size: 0.58rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .pivot-body { padding: 0.5rem 0; }
+  .pivot-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 1rem;
+    font-size: 0.68rem;
+  }
+
+  /* ─── STATS BAR ─── */
+  .stats-bar {
+    display: flex;
+    gap: 2rem;
+    padding: 1.25rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+    flex-wrap: wrap;
+  }
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #fff;
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.6rem;
+    color: var(--muted2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .stat-divider { width: 1px; background: var(--border); align-self: stretch; }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MINERVA API</h1>
+  <span class="subtitle">Esquema de Base de Datos · v0.3.20</span>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPanel('diagram', this)">Diagrama</button>
+    <button class="nav-tab" onclick="showPanel('defs', this)">Definiciones</button>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <span style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted)">Leyenda</span>
+  <div class="legend-item"><div class="leg-dot" style="background:#f59e0b"></div> PK (uuid)</div>
+  <div class="legend-item"><div class="leg-dot" style="background:#a78bfa"></div> FK</div>
+  <div class="legend-item"><div class="leg-line" style="background:#a78bfa;opacity:0.7"></div> ManyToOne</div>
+  <div class="legend-item"><div class="leg-dash" style="border-color:#22d3ee"></div> ManyToMany</div>
+  <div class="legend-item"><div class="leg-dot2" style="border-color:#f59e0b"></div> OneToMany</div>
+  <div class="legend-item"><span style="font-size:0.6rem;color:var(--muted)">? = nullable</span></div>
+</div>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-bar">
+  <div class="stat"><span class="stat-value">8</span><span class="stat-label">Tablas principales</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value">3</span><span class="stat-label">Tablas pivot</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value">8</span><span class="stat-label">Relaciones FK</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value">3</span><span class="stat-label">Relaciones M:M</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value">8</span><span class="stat-label">Relaciones 1:N</span></div>
+  <div class="stat-divider"></div>
+  <div class="stat"><span class="stat-value">MySQL</span><span class="stat-label">Motor · TypeORM 0.3</span></div>
+</div>
+
+
+<!-- ════════════════════════════════════
+     PANEL 1 — DIAGRAM
+════════════════════════════════════ -->
+<div id="panel-diagram" class="panel active">
+  <div class="diagram-wrap">
+    <div class="diagram-stage" id="stage">
+
+      <!-- SVG CONNECTORS -->
+      <svg class="connectors" id="svg-conn" xmlns="http://www.w3.org/2000/svg"></svg>
+
+      <!-- ── AUTHORS  pos: left=20 top=20 ── -->
+      <div class="tcard ca-author" id="c-author" style="left:20px;top:20px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Authors</span><span class="thead-tag">authors</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">name</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">lastname</span><span class="ftype">varchar(50)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">birthdate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">deceasedDate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">active</span><span class="ftype">boolean</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">countryId</span><span class="ftype">varchar(50)?</span></div>
+          <div class="tdiv"></div><div class="tsec">Relaciones</div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">books</span><span class="ftype">↔ Books</span></div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">series</span><span class="ftype">↔ Series</span></div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">mangas</span><span class="ftype">↔ Mangas</span></div>
+        </div>
+      </div>
+
+      <!-- ── BOOKS  pos: left=300 top=20 ── -->
+      <div class="tcard ca-book" id="c-book" style="left:300px;top:20px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Books</span><span class="thead-tag">books</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">title</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">isbn</span><span class="ftype">varchar(13)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">isDigital</span><span class="ftype">boolean</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">format</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">language</span><span class="ftype">varchar(3)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">originalLanguage</span><span class="ftype">varchar(3)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">publicationDate</span><span class="ftype">varchar(10)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">edition</span><span class="ftype">integer?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">downloadLink</span><span class="ftype">varchar(150)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">cover</span><span class="ftype">varchar(150)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">buyDate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">ownerId</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">borrowed</span><span class="ftype">varchar(50)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">notes</span><span class="ftype">varchar(255)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">active</span><span class="ftype">boolean</span></div>
+          <div class="tdiv"></div><div class="tsec">FKs</div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">editorialId</span><span class="ftype">→ editorials</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">genreId</span><span class="ftype">→ genres</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">serieId</span><span class="ftype">→ series?</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">locationId</span><span class="ftype">→ locations</span></div>
+          <div class="tdiv"></div><div class="tsec">M:M</div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">authors</span><span class="ftype">↔ Authors</span></div>
+        </div>
+      </div>
+
+      <!-- ── SERIES  pos: left=580 top=20 ── -->
+      <div class="tcard ca-serie" id="c-serie" style="left:580px;top:20px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Series</span><span class="thead-tag">series</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">name</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">volumes</span><span class="ftype">integer</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">releaseDate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">finishDate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tdiv"></div><div class="tsec">Relaciones</div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">books</span><span class="ftype">← Books</span></div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">authors</span><span class="ftype">↔ Authors</span></div>
+        </div>
+      </div>
+
+      <!-- ── EDITORIALS  pos: left=860 top=20 ── -->
+      <div class="tcard ca-editorial" id="c-editorial" style="left:860px;top:20px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Editorials</span><span class="thead-tag">editorials</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">name</span><span class="ftype">varchar(50)</span></div>
+          <div class="tdiv"></div><div class="tsec">Relaciones</div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">books</span><span class="ftype">← Books</span></div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">mangas</span><span class="ftype">← Mangas</span></div>
+        </div>
+      </div>
+
+      <!-- ── MANGAS  pos: left=300 top=480 ── -->
+      <div class="tcard ca-manga" id="c-manga" style="left:300px;top:470px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Mangas</span><span class="thead-tag">mangas</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">title</span><span class="ftype">varchar(150)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">isDigital</span><span class="ftype">boolean</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">cover</span><span class="ftype">varchar(150)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">volumes</span><span class="ftype">integer</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">firstVolumeDate</span><span class="ftype">varchar(10)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">lastVolumeDate</span><span class="ftype">varchar(10)?</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">originalLanguage</span><span class="ftype">varchar(3)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">language</span><span class="ftype">varchar(3)</span></div>
+          <div class="tdiv"></div><div class="tsec">FKs</div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">editorialId</span><span class="ftype">→ editorials</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">genreId</span><span class="ftype">→ genres</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">locationId</span><span class="ftype">→ locations</span></div>
+          <div class="tdiv"></div><div class="tsec">M:M / 1:N</div>
+          <div class="tfield"><span class="fbadge rel">M:M</span><span class="fname">authors</span><span class="ftype">↔ Authors</span></div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">chapters</span><span class="ftype">← MangaChapters</span></div>
+        </div>
+      </div>
+
+      <!-- ── GENRES  pos: left=860 top=380 ── -->
+      <div class="tcard ca-genre" id="c-genre" style="left:860px;top:370px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Genres</span><span class="thead-tag">genres</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">name</span><span class="ftype">varchar(50)</span></div>
+          <div class="tdiv"></div><div class="tsec">Relaciones</div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">books</span><span class="ftype">← Books</span></div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">mangas</span><span class="ftype">← Mangas</span></div>
+        </div>
+      </div>
+
+      <!-- ── LOCATIONS  pos: left=580 top=480 ── -->
+      <div class="tcard ca-location" id="c-location" style="left:580px;top:470px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">Locations</span><span class="thead-tag">locations</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">address</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">room</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">shelf</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">observations</span><span class="ftype">varchar(250)?</span></div>
+          <div class="tdiv"></div><div class="tsec">Relaciones</div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">books</span><span class="ftype">← Books</span></div>
+          <div class="tfield"><span class="fbadge rel">1:N</span><span class="fname">mangas</span><span class="ftype">← Mangas</span></div>
+        </div>
+      </div>
+
+      <!-- ── MANGA CHAPTERS  pos: left=20 top=480 ── -->
+      <div class="tcard ca-chapter" id="c-chapter" style="left:20px;top:470px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">MangaChapters</span><span class="thead-tag">manga_chapters</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge pk">PK</span><span class="fname">id</span><span class="ftype">uuid</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">pages</span><span class="ftype">integer</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">folder</span><span class="ftype">varchar(50)</span></div>
+          <div class="tfield"><span class="fbadge col">col</span><span class="fname">publicationDate</span><span class="ftype">varchar(50)?</span></div>
+          <div class="tdiv"></div><div class="tsec">FK</div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">mangaId</span><span class="ftype">→ mangas</span></div>
+        </div>
+      </div>
+
+      <!-- ── PIVOT author_books  pos: left=20 top=800 ── -->
+      <div class="tcard ca-pivot" id="c-ab" style="left:20px;top:820px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">author_books</span><span class="thead-tag">pivot M:M</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">authorId</span><span class="ftype">→ authors</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">bookId</span><span class="ftype">→ books</span></div>
+        </div>
+      </div>
+
+      <!-- ── PIVOT author_series  pos: left=300 top=800 ── -->
+      <div class="tcard ca-pivot" id="c-as" style="left:300px;top:820px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">author_series</span><span class="thead-tag">pivot M:M</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">authorId</span><span class="ftype">→ authors</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">serieId</span><span class="ftype">→ series</span></div>
+        </div>
+      </div>
+
+      <!-- ── PIVOT author_manga  pos: left=580 top=800 ── -->
+      <div class="tcard ca-pivot" id="c-am" style="left:580px;top:820px">
+        <div class="thead"><div class="thead-dot"></div><span class="thead-name">author_manga</span><span class="thead-tag">pivot M:M</span></div>
+        <div class="tfields">
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">authorId</span><span class="ftype">→ authors</span></div>
+          <div class="tfield"><span class="fbadge fk">FK</span><span class="fname">mangaId</span><span class="ftype">→ mangas</span></div>
+        </div>
+      </div>
+
+    </div><!-- /diagram-stage -->
+  </div><!-- /diagram-wrap -->
+</div><!-- /panel-diagram -->
+
+
+<!-- ════════════════════════════════════
+     PANEL 2 — DEFINITIONS
+════════════════════════════════════ -->
+<div id="panel-defs" class="panel">
+  <div class="defs-wrap">
+    <h2 class="defs-title">Definición de Tablas</h2>
+    <p class="defs-sub">Descripción completa de cada entidad, sus campos, tipos de datos y relaciones. Motor: MySQL · ORM: TypeORM 0.3 · IDs: uuid v4.</p>
+
+    <!-- AUTHORS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(124,58,237,0.06)">
+        <div class="def-header-dot" style="background:var(--c-author)"></div>
+        <div>
+          <div class="def-header-name">authors</div>
+          <div class="def-header-entity">author.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Almacena los autores de libros, series y mangas. Un autor puede participar en múltiples obras a través de relaciones ManyToMany.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36) / uuid</td><td class="null-no">NO</td><td class="td-desc">Identificador único generado como UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">name</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Nombre(s) del autor</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">lastname</td><td class="td-type">VARCHAR(50)</td><td class="null-yes">SÍ</td><td class="td-desc">Apellido(s) del autor</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">birthdate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de nacimiento en formato YYYY-MM-DD</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">deceasedDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de fallecimiento (null si está vivo)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">active</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">Soft-delete lógico; false = autor desactivado</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">countryId</td><td class="td-type">VARCHAR(50)</td><td class="null-yes">SÍ</td><td class="td-desc">Código de país (referencia a countries.json)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> authors ↔ books (via author_books)</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> authors ↔ series (via author_series)</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> authors ↔ mangas (via author_manga)</span>
+      </div>
+    </div>
+
+    <!-- BOOKS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(14,165,233,0.06)">
+        <div class="def-header-dot" style="background:var(--c-book)"></div>
+        <div>
+          <div class="def-header-name">books</div>
+          <div class="def-header-entity">book.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Catálogo principal de libros físicos y digitales. Referencia a editorial, género, ubicación física y serie; tiene relación M:M con autores.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">title</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Título del libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">isbn</td><td class="td-type">VARCHAR(13)</td><td class="null-no">NO</td><td class="td-desc">Número de identificación internacional del libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">isDigital</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">True si es un libro digital (ebook)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">format</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Formato físico: tapa blanda, tapa dura, etc.</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">language</td><td class="td-type">VARCHAR(3)</td><td class="null-no">NO</td><td class="td-desc">Idioma de la copia (código ISO 639-2)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">originalLanguage</td><td class="td-type">VARCHAR(3)</td><td class="null-no">NO</td><td class="td-desc">Idioma original de la obra (ISO 639-2)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">publicationDate</td><td class="td-type">VARCHAR(10)</td><td class="null-no">NO</td><td class="td-desc">Fecha de publicación YYYY-MM-DD</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">edition</td><td class="td-type">INT</td><td class="null-yes">SÍ</td><td class="td-desc">Número de edición del libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">downloadLink</td><td class="td-type">VARCHAR(150)</td><td class="null-yes">SÍ</td><td class="td-desc">URL de descarga para libros digitales</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">cover</td><td class="td-type">VARCHAR(150)</td><td class="null-yes">SÍ</td><td class="td-desc">Ruta o URL de la imagen de portada</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">buyDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de compra YYYY-MM-DD</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">ownerId</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Identificador del propietario del libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">borrowed</td><td class="td-type">VARCHAR(50)</td><td class="null-yes">SÍ</td><td class="td-desc">Nombre/ID de quien tiene prestado el libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">notes</td><td class="td-type">VARCHAR(255)</td><td class="null-yes">SÍ</td><td class="td-desc">Notas adicionales sobre el libro</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">active</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">Soft-delete; false = libro desactivado</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">editorialId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a editorials.id — ManyToOne</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">genreId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a genres.id — ManyToOne</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">serieId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a series.id — ManyToOne (opcional)</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">locationId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a locations.id — ManyToOne</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> books ↔ authors (via author_books)</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> books → editorials</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> books → genres</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> books → series</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> books → locations</span>
+      </div>
+    </div>
+
+    <!-- SERIES -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(245,158,11,0.06)">
+        <div class="def-header-dot" style="background:var(--c-serie)"></div>
+        <div>
+          <div class="def-header-name">series</div>
+          <div class="def-header-entity">serie.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Agrupa libros bajo una misma saga o colección. Tiene relación M:M con autores y OneToMany con books.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">name</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Nombre de la serie</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">volumes</td><td class="td-type">INT</td><td class="null-no">NO</td><td class="td-desc">Número total de volúmenes de la serie</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">releaseDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de publicación del primer tomo</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">finishDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha del último tomo (null si en curso)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> series ↔ authors (via author_series)</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> series → books (OneToMany)</span>
+      </div>
+    </div>
+
+    <!-- EDITORIALS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(16,185,129,0.06)">
+        <div class="def-header-dot" style="background:var(--c-editorial)"></div>
+        <div>
+          <div class="def-header-name">editorials</div>
+          <div class="def-header-entity">editorial.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Catálogo de editoriales. Referenciada tanto por books como por mangas.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">name</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Nombre de la editorial</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> editorials ← books</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> editorials ← mangas</span>
+      </div>
+    </div>
+
+    <!-- GENRES -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(239,68,68,0.06)">
+        <div class="def-header-dot" style="background:var(--c-genre)"></div>
+        <div>
+          <div class="def-header-name">genres</div>
+          <div class="def-header-entity">genre.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Clasificación de géneros literarios. Compartido entre libros y mangas.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">name</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Nombre del género (Ej: Novela, Ciencia Ficción…)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> genres ← books</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> genres ← mangas</span>
+      </div>
+    </div>
+
+    <!-- LOCATIONS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(52,211,153,0.06)">
+        <div class="def-header-dot" style="background:var(--c-location)"></div>
+        <div>
+          <div class="def-header-name">locations</div>
+          <div class="def-header-entity">location.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Ubicación física donde están almacenados los libros y mangas (dirección, sala, estantería).</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">address</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Dirección del lugar (ej: Casa principal)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">room</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Habitación o sala dentro de la ubicación</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">shelf</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Identificador de estantería o anaquel</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">observations</td><td class="td-type">VARCHAR(250)</td><td class="null-yes">SÍ</td><td class="td-desc">Notas adicionales sobre la ubicación</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> locations ← books</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> locations ← mangas</span>
+      </div>
+    </div>
+
+    <!-- MANGAS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(236,72,153,0.06)">
+        <div class="def-header-dot" style="background:var(--c-manga)"></div>
+        <div>
+          <div class="def-header-name">mangas</div>
+          <div class="def-header-entity">manga.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Catálogo de mangas físicos y digitales. Estructura paralela a books, con campo de volúmenes y fechas de publicación por volumen.</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">title</td><td class="td-type">VARCHAR(150)</td><td class="null-no">NO</td><td class="td-desc">Título del manga</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">isDigital</td><td class="td-type">TINYINT(1)</td><td class="null-no">NO</td><td class="td-desc">True si es formato digital</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">cover</td><td class="td-type">VARCHAR(150)</td><td class="null-yes">SÍ</td><td class="td-desc">Ruta o URL de la imagen de portada</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">volumes</td><td class="td-type">INT</td><td class="null-no">NO</td><td class="td-desc">Número total de volúmenes publicados</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">firstVolumeDate</td><td class="td-type">VARCHAR(10)</td><td class="null-no">NO</td><td class="td-desc">Fecha del primer volumen YYYY-MM-DD</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">lastVolumeDate</td><td class="td-type">VARCHAR(10)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha del último volumen (null si en curso)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">originalLanguage</td><td class="td-type">VARCHAR(3)</td><td class="null-no">NO</td><td class="td-desc">Idioma original (generalmente jpn)</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">language</td><td class="td-type">VARCHAR(3)</td><td class="null-no">NO</td><td class="td-desc">Idioma de la copia en colección (ISO 639-2)</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">editorialId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a editorials.id — ManyToOne</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">genreId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a genres.id — ManyToOne</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">locationId</td><td class="td-type">VARCHAR(36)</td><td class="null-yes">SÍ</td><td class="td-desc">Referencia a locations.id — ManyToOne</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-mm">M:M</span> mangas ↔ authors (via author_manga)</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> mangas → editorials</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> mangas → genres</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> mangas → locations</span>
+        <span class="rel-pill"><span class="rtype rtype-1m">1:N</span> mangas ← manga_chapters</span>
+      </div>
+    </div>
+
+    <!-- MANGA CHAPTERS -->
+    <div class="def-section">
+      <div class="def-header" style="background:rgba(167,139,250,0.06)">
+        <div class="def-header-dot" style="background:var(--c-chapter)"></div>
+        <div>
+          <div class="def-header-name">manga_chapters</div>
+          <div class="def-header-entity">manga-chapter.entity.ts</div>
+        </div>
+        <div class="def-header-desc">Capítulos individuales de un manga. Cada capítulo pertenece a un único manga (ManyToOne).</div>
+      </div>
+      <div class="def-body">
+        <table class="def-table">
+          <thead><tr><th>Tipo</th><th>Campo</th><th>Tipo SQL</th><th>Nullable</th><th>Descripción</th></tr></thead>
+          <tbody>
+            <tr><td><span class="td-badge td-pk">PK</span></td><td class="td-name">id</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Identificador único UUID v4</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">pages</td><td class="td-type">INT</td><td class="null-no">NO</td><td class="td-desc">Número de páginas del capítulo</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">folder</td><td class="td-type">VARCHAR(50)</td><td class="null-no">NO</td><td class="td-desc">Ruta de la carpeta donde están los archivos</td></tr>
+            <tr><td><span class="td-badge td-col">col</span></td><td class="td-name">publicationDate</td><td class="td-type">VARCHAR(50)</td><td class="null-yes">SÍ</td><td class="td-desc">Fecha de publicación del capítulo</td></tr>
+            <tr><td><span class="td-badge td-fk">FK</span></td><td class="td-name">mangaId</td><td class="td-type">VARCHAR(36)</td><td class="null-no">NO</td><td class="td-desc">Referencia a mangas.id — ManyToOne</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="def-rels">
+        <span class="def-rels-label">Relaciones</span>
+        <span class="rel-pill"><span class="rtype rtype-m1">N:1</span> manga_chapters → mangas</span>
+      </div>
+    </div>
+
+    <!-- PIVOT TABLES -->
+    <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.9rem;color:#94a3b8;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">Tablas Pivot (ManyToMany)</h3>
+    <div class="pivot-grid">
+      <div class="pivot-card">
+        <div class="pivot-header"><span class="pivot-header-name">author_books</span><span class="pivot-tag">JoinTable</span></div>
+        <div class="pivot-body">
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">authorId</span><span style="color:var(--muted);font-size:0.62rem;">→ authors.id</span></div>
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">bookId</span><span style="color:var(--muted);font-size:0.62rem;">→ books.id</span></div>
+          <div style="padding:0.4rem 1rem 0.5rem;font-size:0.62rem;color:var(--muted2)">Creada automáticamente por TypeORM a partir del decorador @JoinTable en Author.books / Book.authors</div>
+        </div>
+      </div>
+      <div class="pivot-card">
+        <div class="pivot-header"><span class="pivot-header-name">author_series</span><span class="pivot-tag">JoinTable</span></div>
+        <div class="pivot-body">
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">authorId</span><span style="color:var(--muted);font-size:0.62rem;">→ authors.id</span></div>
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">serieId</span><span style="color:var(--muted);font-size:0.62rem;">→ series.id</span></div>
+          <div style="padding:0.4rem 1rem 0.5rem;font-size:0.62rem;color:var(--muted2)">Creada automáticamente por TypeORM a partir del decorador @JoinTable en Serie.authors</div>
+        </div>
+      </div>
+      <div class="pivot-card">
+        <div class="pivot-header"><span class="pivot-header-name">author_manga</span><span class="pivot-tag">JoinTable</span></div>
+        <div class="pivot-body">
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">authorId</span><span style="color:var(--muted);font-size:0.62rem;">→ authors.id</span></div>
+          <div class="pivot-row"><span class="td-badge td-fk">FK</span><span style="color:#dde1ef;font-size:0.68rem;">mangaId</span><span style="color:var(--muted);font-size:0.62rem;">→ mangas.id</span></div>
+          <div style="padding:0.4rem 1rem 0.5rem;font-size:0.62rem;color:var(--muted2)">Creada automáticamente por TypeORM a partir del decorador @JoinTable en Manga.authors</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  // ── Tab switching ──
+  function showPanel(name, btn) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + name).classList.add('active');
+    btn.classList.add('active');
+    if (name === 'diagram') drawConnectors();
+  }
+
+  // ── Draw SVG connectors ──
+  function getCenter(el) {
+    const stage = document.getElementById('stage');
+    const sr = stage.getBoundingClientRect();
+    const er = el.getBoundingClientRect();
+    return {
+      x: er.left - sr.left + er.width / 2,
+      y: er.top - sr.top + er.height / 2,
+      top:    er.top - sr.top,
+      bottom: er.bottom - sr.top,
+      left:   er.left - sr.left,
+      right:  er.right - sr.left,
+      midY:   er.top - sr.top + er.height / 2,
+      midX:   er.left - sr.left + er.width / 2,
+    };
+  }
+
+  function makePath(x1,y1,x2,y2) {
+    const dx = Math.abs(x2-x1) * 0.5;
+    return `M ${x1} ${y1} C ${x1+dx} ${y1}, ${x2-dx} ${y2}, ${x2} ${y2}`;
+  }
+
+  function addLine(svg, x1,y1,x2,y2, cls, label) {
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d', makePath(x1,y1,x2,y2));
+    path.setAttribute('class', 'conn-line ' + cls);
+    svg.appendChild(path);
+    if (label) {
+      const mx = (x1+x2)/2, my = (y1+y2)/2;
+      const t = document.createElementNS('http://www.w3.org/2000/svg','text');
+      t.setAttribute('x', mx); t.setAttribute('y', my - 4);
+      t.setAttribute('text-anchor','middle');
+      t.setAttribute('class','conn-label');
+      t.textContent = label;
+      svg.appendChild(t);
+    }
+  }
+
+  function drawConnectors() {
+    const svg = document.getElementById('svg-conn');
+    svg.innerHTML = `
+      <style>
+        .conn-line { fill:none; stroke-width:1.5; }
+        .fk-line   { stroke:#a78bfa; opacity:0.55; }
+        .mm-line   { stroke:#22d3ee; opacity:0.45; stroke-dasharray:5,3; }
+        .om-line   { stroke:#f59e0b; opacity:0.35; stroke-dasharray:2,3; }
+        .conn-label { font-family:monospace; font-size:9px; fill:#4a5068; }
+      </style>
+    `;
+    const ids = ['c-author','c-book','c-serie','c-editorial','c-manga','c-genre','c-location','c-chapter','c-ab','c-as','c-am'];
+    const el = {};
+    ids.forEach(id => { const e = document.getElementById(id); if(e) el[id] = e; });
+
+    function R(id) { return getCenter(el[id]); }
+    if (!el['c-author']) return;
+
+    // Books → Editorial (FK, right→left)
+    const b = R('c-book'), ed = R('c-editorial');
+    addLine(svg, b.right, b.top+30, ed.left, ed.top+30, 'fk-line', 'N:1');
+
+    // Books → Genre
+    const ge = R('c-genre');
+    addLine(svg, b.right, b.top+60, ge.left, ge.top+20, 'fk-line', 'N:1');
+
+    // Books → Serie (right→left)
+    const se = R('c-serie');
+    addLine(svg, b.right, b.top+80, se.right, se.top+40, 'fk-line', 'N:1');
+
+    // Books → Location
+    const lo = R('c-location');
+    addLine(svg, b.bottom-30, b.bottom, lo.top, lo.left+60, 'fk-line', 'N:1');
+
+    // Manga → Editorial
+    const mg = R('c-manga');
+    addLine(svg, mg.right, mg.top+30, ed.left, ed.bottom-30, 'fk-line', 'N:1');
+
+    // Manga → Genre
+    addLine(svg, mg.right, mg.top+55, ge.left, ge.midY, 'fk-line', 'N:1');
+
+    // Manga → Location
+    addLine(svg, mg.right, mg.midY, lo.left, lo.midY, 'fk-line', 'N:1');
+
+    // Chapter → Manga
+    const ch = R('c-chapter');
+    addLine(svg, ch.right, ch.midY, mg.left, mg.bottom-30, 'fk-line', 'N:1');
+
+    // M:M via pivot — author_books
+    const au = R('c-author'), ab = R('c-ab');
+    addLine(svg, au.bottom, au.bottom, ab.top, ab.left+50, 'mm-line', '');
+    addLine(svg, b.bottom, b.bottom, ab.top, ab.right-50, 'mm-line', '');
+
+    // M:M via pivot — author_series
+    const as_ = R('c-as');
+    addLine(svg, au.bottom, au.bottom+5, as_.top, as_.left+50, 'mm-line', '');
+    addLine(svg, se.bottom, se.bottom, as_.top, as_.right-30, 'mm-line', '');
+
+    // M:M via pivot — author_manga
+    const am = R('c-am');
+    addLine(svg, au.bottom, au.bottom+8, am.top, am.left+50, 'mm-line', '');
+    addLine(svg, mg.bottom, mg.bottom, am.top, am.right-30, 'mm-line', '');
+
+    // 1:N Serie → Books (dashed orange)
+    addLine(svg, se.bottom, se.bottom, b.bottom-5, b.right-30, 'om-line', '1:N');
+
+    // 1:N Manga → Chapters
+    addLine(svg, mg.left, mg.bottom-50, ch.right, ch.midY+10, 'om-line', '1:N');
+  }
+
+  // Draw on load
+  window.addEventListener('load', () => {
+    setTimeout(drawConnectors, 100);
+  });
+  window.addEventListener('resize', drawConnectors);
+</script>
+</body>
+</html>

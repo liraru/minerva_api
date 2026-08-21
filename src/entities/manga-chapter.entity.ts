@@ -1,11 +1,6 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Manga } from 'src/entities/manga.entity';
-import {
-  Column,
-  Entity,
-  ManyToOne,
-  PrimaryGeneratedColumn
-} from 'typeorm';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Manga } from '@entities/manga.entity';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity({ name: ENTITIES.MANGA_CHAPTERS })
 export class MangaChapter {

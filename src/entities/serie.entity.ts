@@ -1,13 +1,13 @@
-import { ENTITIES } from 'src/config/entity-tagging.constant';
-import { Author } from 'src/entities/author.entity';
-import { Book } from 'src/entities/book.entity';
+import { ENTITIES } from '@config/entity-tagging.constant';
+import { Author } from '@entities/author.entity';
+import { Book } from '@entities/book.entity';
 import {
-  Column,
   Entity,
-  JoinTable,
-  ManyToMany,
+  PrimaryGeneratedColumn,
+  Column,
   OneToMany,
-  PrimaryGeneratedColumn
+  ManyToMany,
+  JoinTable
 } from 'typeorm';
 
 @Entity({ name: ENTITIES.SERIE })
@@ -15,8 +15,11 @@ export class Serie {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column(`varchar`, { length: 50, nullable: false })
+  @Column(`varchar`, { length: 150, nullable: false })
   name: string;
+
+  @Column(`varchar`, { length: 255, nullable: true })
+  description?: string;
 
   @Column(`integer`, { nullable: false })
   volumes: number;
@@ -33,8 +36,8 @@ export class Serie {
   @ManyToMany(() => Author, (author) => author.series, { cascade: true })
   @JoinTable({
     name: `author_series`,
-    joinColumn: { name: `authorId`, referencedColumnName: `id` },
-    inverseJoinColumn: { name: `serieId`, referencedColumnName: `id` }
+    joinColumn: { name: `serieId`, referencedColumnName: `id` },
+    inverseJoinColumn: { name: `authorId`, referencedColumnName: `id` },
   })
   authors: Author[];
 
