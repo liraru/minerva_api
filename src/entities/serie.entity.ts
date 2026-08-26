@@ -1,4 +1,4 @@
-import { ENTITIES } from '@config/entity-tagging.constant';
+import { ENTITY } from '@config/entity-tagging.constant';
 import { Author } from '@entities/author.entity';
 import { Book } from '@entities/book.entity';
 import {
@@ -10,7 +10,7 @@ import {
   JoinTable
 } from 'typeorm';
 
-@Entity({ name: ENTITIES.SERIE })
+@Entity({ name: ENTITY.SERIE })
 export class Serie {
   @PrimaryGeneratedColumn('uuid')
   id: string;

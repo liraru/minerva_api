@@ -1,10 +1,10 @@
-import { ENTITIES } from '@config/entity-tagging.constant';
+import { ENTITY } from '@config/entity-tagging.constant';
 import { Book } from '@entities/book.entity';
 import { Manga } from '@entities/manga.entity';
 import { Serie } from '@entities/serie.entity';
 import { Entity, PrimaryGeneratedColumn, Column, ManyToMany } from 'typeorm';
 
-@Entity({ name: ENTITIES.AUTHOR })
+@Entity({ name: ENTITY.AUTHOR })
 export class Author {
   @PrimaryGeneratedColumn('uuid')
   id: string;

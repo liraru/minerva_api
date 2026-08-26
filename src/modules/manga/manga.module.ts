@@ -1,4 +1,5 @@
 import { MangaChapter } from '@entities/manga-chapter.entity';
+import { MangaVolume } from '@entities/manga-volume';
 import { Manga } from '@entities/manga.entity';
 import { MangaChaptersController } from '@modules/manga/controllers/manga-chapters/manga-chapters.controller';
 import { MangaController } from '@modules/manga/controllers/manga/manga.controller';
@@ -11,7 +12,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   controllers: [MangaController, MangaChaptersController],
-  imports: [TypeOrmModule.forFeature([Manga, MangaChapter])],
+  imports: [TypeOrmModule.forFeature([Manga, MangaChapter, MangaVolume])],
   providers: [
     MangaService,
     MangaQueryBuilderService,
@@ -20,3 +21,4 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   ]
 })
 export class MangaModule {}
+  
