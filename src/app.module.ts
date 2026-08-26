@@ -9,6 +9,7 @@ import { StatsModule } from '@modules/stats/stats.module';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { databaseConfig } from '../private/database.config';
+import { AuthModule } from '@modules/auth/auth.module';
 
 const environment: 'local' | 'develop' = 'local';
 
@@ -33,7 +34,8 @@ function getDBConfig(host: 'local' | 'develop'): TypeOrmModuleOptions {
     GenresModule,
     MangaModule,
     StatsModule,
-    LocationsModule
+    LocationsModule,
+    AuthModule,
   ],
   controllers: [],
   providers: []
